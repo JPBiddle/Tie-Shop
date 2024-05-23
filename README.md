@@ -5,10 +5,11 @@
 ![Portfolio Mockup]()
 [Click here to view the live project]()
 
-- [M&T Tie Emporium](#M&T-Tie-Emporium)
+- [M&T Tie Emporium](#monty--turners-tie-emporium)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [UX](#ux)
+  - [Development Planes](#development-planes)
   - [Features](#features)
   - [Issues and Bugs](#issues-and-bugs)
   - [Technology Used](#technologies-used)
@@ -90,7 +91,7 @@ With this in mind I have produced a short diagram representing the viability of 
 
 </details>
 
-[Back to top](#M&T-Tie-Emporium)
+[Back to top](#monty--turners-tie-emporium)
 
 ---
 
@@ -168,7 +169,7 @@ The typography I will use will be
 
 
 
-[Back to top](#M&T-Tie-Emporium)
+[Back to top](#monty--turners-tie-emporium)
 
 ---
 
@@ -225,7 +226,7 @@ Due to time constraints I was unable to implement the following functions, howev
 
 - 
 
-[Back to top](#M&T-Tie-Emporium)
+[Back to top](#monty--turners-tie-emporium)
 
 ---
 
@@ -293,6 +294,6 @@ Please view full testing document [here]()
 ---
 
 
-[Back to top](#M&T-Tie-Emporium)
+[Back to top](#monty--turners-tie-emporium)
 
 ---
