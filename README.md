@@ -41,11 +41,20 @@ The aim for me is to create a website that appeals to:
 
 #### New Users
 
-- As a new user
+- As a new user I want to be able to browse relevant products
+- As a new user I want to be able to contact the site owner
+- As a new user I want to be able to sign up and create a personal account
+- As a new user I want to be able to connect with the business via social sites
 
 #### Current Users
 
-- As a current user
+- As a current user I want to be able view products as I did as a new user
+- As a current user I want to be able to log in to my personal account and view my personal data
+- As a current user I want to be able to securely edit my data
+- As a current user I want to be able to add products I am interested in to my cart for later
+- As a current user I want to be able to edit the items in my cart by either removing them or changing the quantity
+- As a current user I want to be able to securely checkout the items in my cart to complete an order
+- As a current user I want an order confirmation sent to my email to give me details of that order
 
 ---
 
@@ -55,7 +64,7 @@ The aim for me is to create a website that appeals to:
 
 #### Strategy
 
-The strategy was 
+To design a site that fits the users needs, the following development planes were consulted to assist with answering the user stories.
 
 - roles
 
@@ -64,21 +73,39 @@ The strategy was
 
 
 - Demographic
-
-  - 
+  - Interested in menswear
+  - Adults
+  - Seeking high quality men's accessories
+  - Western demographic, focus on united kingdom
 
 - Psychographic
   - Lifestyles
-    - 
-  - Personality and Attitudes
-    - 
+    - Potential office workers
+    - Users who frequently adpot formal attire
+
+- Personality and Attitudes 
+  - Professionals
+  - Attention to detail
+  - Social
+
 - Values
-  - 
+  - Focus on maintaining smart appearance
+  - Appreciates high quality 
+  - Appreciates wide choice of selective items
 
 This website needs to enable the user to:
 
-- 
+- Create an account and login
+- Purchase a tie or multiple ties
+- Edit and save user info (email, physical address)
+- Contact the site owner
+- visit site social links
 
+This website needs to enable the owner to:
+
+- Display available products
+- Provide a point of contact
+- Provide information about the site
 
 
 With this in mind I have produced a short diagram representing the viability of elements versus importance within the site.
@@ -87,7 +114,7 @@ With this in mind I have produced a short diagram representing the viability of 
 
 <summary>Viability chart</summary>
 
-![viability]()
+![viability](#tie_shop_viability.jpg)
 
 </details>
 
