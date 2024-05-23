@@ -127,11 +127,26 @@ With this in mind I have produced a short diagram representing the viability of 
 Based on the requirements of the Strategy plane, I have identified two categories.
 
 - Content Requirements:
-
-  - 
-
+  - Products (ties)
+    - categories will be colour and material 
+    - images of each product
+  - Contact form for emailing site owner
+  - Login/sign up form
+  - User dashboard 
+    - Edit user email and physical address
+    - View past orders
 - Function Requirements:
-  - 
+  - Users can search for key words via a search bar
+  - Users can select a category of ties
+    -Categories will be colour and material
+  - Sign in page and sign up page
+  - User dashboard
+    - Edit user data
+  - Cart for items selected to buy
+    - Edit quantity and remove items from cart
+    - Complete checkout from cart
+  - Contact site owner via form
+
 
 ---
 
@@ -141,19 +156,33 @@ Based on the information so far,
 
 The intended path will be as follows:
 
-#### Unregistered User
+#### Path for first visit account creation and sign in
 
- - 
+ <details>
 
-#### Existing User
+<summary>Expand for map</summary>
 
- - 
+![Map]()
 
-Below is a map created using Balsamiq - 
+</details>
+ 
+
+#### Path for finding and adding product to basket
+
+ <details>
+
+<summary>Expand for map</summary>
+
+![Map]()
+
+</details>
+
+
+ #### Path for purchasing an item
 
 <details>
 
-<summary>Site Map</summary>
+<summary>Expand for map</summary>
 
 ![Map]()
 
