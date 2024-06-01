@@ -1,0 +1,58 @@
+[
+{
+    "model": "products.colour",
+    "pk": 1,
+    "fields": {
+        "name": "Red"
+    }
+},
+{
+    "model": "products.colour",
+    "pk": 2,
+    "fields": {
+        "name": "Blue"
+    }
+},
+{
+    "model": "products.colour",
+    "pk": 3,
+    "fields": {
+        "name": "Black"
+    }
+},
+{
+    "model": "products.colour",
+    "pk": 4,
+    "fields": {
+        "name": "Green"
+    }
+},
+{
+    "model": "products.colour",
+    "pk": 5,
+    "fields": {
+        "name": "Grey"
+    }
+},
+{
+    "model": "products.colour",
+    "pk": 6,
+    "fields": {
+        "name": "Beige"
+    }
+},
+{
+    "model": "products.colour",
+    "pk": 7,
+    "fields": {
+        "name": "Pink"
+    }
+},
+{
+    "model": "products.colour",
+    "pk": 8,
+    "fields": {
+        "name": "Orange"
+    }
+}
+]

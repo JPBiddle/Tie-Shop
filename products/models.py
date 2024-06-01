@@ -29,6 +29,7 @@ class Product(models.Model):
     description = models.CharField(max_length=750, default='', blank=True, null=True)
     image = models.ImageField(upload_to='uploads/product/')
     image_2 = models.ImageField(upload_to='uploads/product/')
+    product_id = models.CharField(max_length=10, default='')
 
     def __str__(self):
         return self.name
