@@ -30,6 +30,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to='uploads/product/')
     image_2 = models.ImageField(upload_to='uploads/product/')
     product_id = models.CharField(max_length=10, default='')
+    sku = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
