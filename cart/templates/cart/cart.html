@@ -4,27 +4,31 @@
 {% block content %}
     <br>
     <br>
+<div class="row">
+    <div class="col text-center">
+        <h4>Complimentary shipping on orders over £{{ free_delivery_threshold }}</h4>
+    </div>
+</div>
+<br>
 <div class="container mb-2">
     <div class="row">
         
-        <div class="col text-center">Shopping Cart</div>
+        <div class="col text-center">
+            <h3>Your Cart</h3>
+        </div>
     </div>
-<div class="row text center">
-    <div class="col">
-        <h3>Complimentary shipping on orders over £{{ free_delivery_threshold }}</h3>
-    </div>
-</div>
+
     <div class="row">
         <div class="col">
             {% if car_items %}
                 <div class="table-responsive rounded"></div>
             {% else %}
                 <p class="lead mb-5">Your cart is empty.</p>
-                <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg">
+                <a href="{% url 'products' %}" class="btn btn-lg">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
-                    <span>keep Shopping</span>
+                    <span>Go back</span>
                 </a>
             {% endif %}
         </div>
