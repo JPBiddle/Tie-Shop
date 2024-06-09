@@ -9,3 +9,15 @@ h1 {
 .added {
     font-weight: bold;
 }
+
+.footer_base {
+    background-color: #cfcdc9;
+}
+
+.nav_base {
+    background-color: #cfcdc9;
+}
+
+.update-link {
+    cursor: pointer;
+}

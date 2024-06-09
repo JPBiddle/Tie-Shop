@@ -29,7 +29,7 @@
   </head>
 
   <body>
-    <nav class="navbar sticky-top navbar-expand-lg bg-white">
+    <nav class="navbar nav_base sticky-top navbar-expand-lg">
       <div class="container-fluid">
           <div class="collapse navbar navbar-collapse" id="navbar">
               <ul class="navbar-nav">
@@ -74,8 +74,11 @@
 
     {% block endjs %}
     {% endblock %}
+
+    {% block postloadjs %}
+    {% endblock %}
     
-    <footer class="text-center">
+    <footer class="text-center footer_base">
       <div>
          <section>
             <hr class="w60">

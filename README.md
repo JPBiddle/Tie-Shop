@@ -289,8 +289,7 @@ Due to time constraints I was unable to implement the following functions, howev
 ## Issues and Bugs
 
 ### --
-
-
+Issue with added to cart javascript and python redirect not allowing user to read 'Added to bag' for long enough.
 
 
 
