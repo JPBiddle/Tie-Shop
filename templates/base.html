@@ -68,7 +68,7 @@
       <div class="container-fluid">
         <form class="d-flex mx-lg-auto col-lg-6" method="POST" action="{% url 'search' %}">
           {% csrf_token %}
-          <input class="form-control me-2 type="search" placeholder="Search Ties" aria-label="Search" name="searched">
+          <input class="form-control me-2 type="search" placeholder="Search Ties" aria-label="Search" name="searched" required>
           <button class="btn btn-outline-dark" type="submit">Search</button>
         </form>
       </div>
