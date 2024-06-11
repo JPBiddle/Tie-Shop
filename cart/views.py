@@ -48,9 +48,6 @@ def remove_from_cart(request, item_id):
 
         cart = request.session.get('cart', {})
 
-        del cart[item_id]
-        if not current_cart[item_id]:
-            current_cart.pop(item_id)
         cart.pop(item_id)
 
         request.session['cart'] = cart
