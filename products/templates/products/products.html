@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h3>Shop</h3>
+            <h3>Shop All</h3>
             <hr class="w60">
         </div>
     </div>
@@ -35,8 +35,9 @@
                     Shop by material
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Shantung</a></li>
-                    <li><a class="dropdown-item" href="#">Silk</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}">All</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' 'Shantung' %}">Shantung</a></li>
+                    <li><a class="dropdown-item" href="{% url 'category' 'Silk' %}">Silk</a></li>
                 </ul>
         </div>
     </div>
