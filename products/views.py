@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render, get_object_or_404
 from .models import Product, Colour, Category
+from django.db.models import Q
 
 def all_products(request):
 
@@ -34,3 +35,15 @@ def category(request, plob):
 
     except:
         return redirect('products/products.html')
+
+
+def search(request):
+
+    if request.method == "POST":
+        searched = request.POST['searched']
+        products = Product.objects.filter(Q(name__contains=searched)|Q(description__contains=searched))
+        return render(request, 'products/search.html', {'searched':searched, 'products':products})
+
+    else:
+
+        return render(request, 'products/search.html', {})

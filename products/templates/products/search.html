@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h3>Shop search</h3>
+            <hr class="w60">
+        </div>
+    </div>
+</div>
+
+{% if searched %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h4>Results for '{{ searched }}'...</h4>
+        </div>
+    </div>
+</div>
+
+{% if products|length < 1 %}
+                    <div>
+                        <p>No search results, please try again!
+                        </p>
+                    </div>
+{% endif %}
+
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="row mt-1 mb-2"></div>
+            <div class="row">
+                {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card w-75 mb-4 border-20">
+                        <a href="{% url 'product_info' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        <div class="card-body pb-0 text-center">
+                            <p class="mb-0">{{ product.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-center font-weight-bold">£{{ product.price }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+    <p>No search results</p>
+{% endif %}
+{% endblock %}
