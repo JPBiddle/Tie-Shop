@@ -17,6 +17,7 @@ def add_to_cart(request, item_id):
 
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
+        messages.success(request, f'Added {product.name} to Cart')
     else:
         cart[item_id] = quantity
         messages.success(request, f'Added {product.name} to Cart')
@@ -27,6 +28,7 @@ def add_to_cart(request, item_id):
 def adjust_cart(request, item_id):
 
     # Get quantity of item and add to current bag
+    product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
 
     # get products
@@ -37,6 +39,7 @@ def adjust_cart(request, item_id):
 
     if quantity > 0:
         cart[item_id] = quantity
+        messages.success(request, f'Updated quanity of {product.name} in Cart')
     else:
         cart.pop(item_id)
 
@@ -48,14 +51,17 @@ def adjust_cart(request, item_id):
 
 def remove_from_cart(request, item_id):
 
+    product = Product.objects.get(pk=item_id)
+
     try:
 
         cart = request.session.get('cart', {})
 
         cart.pop(item_id)
-
+        messages.success(request, f'Removed {product.name} from Cart')
         request.session['cart'] = cart
         return HttpResponse(status=200)
 
     except Exception as e:
+        messages.error(request, f'Error removing item from cart: {e}')
         return HttpResponse(status=500)
