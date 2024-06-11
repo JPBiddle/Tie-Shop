@@ -36,17 +36,4 @@
     </div>
 </div>
 
-<script>
-
-addedToCart = document.querySelectorAll(".add-to-cart");
-
-    document.querySelectorAll('.add-to-cart').forEach(function(addedToCart) {
-        addedToCart.addEventListener('click', function() {
-            addedToCart.classList.add('added');
-            let added = document.getElementById('add-to-cart');
-            added.setAttribute('value', 'Added to Cart!');
-        });
-    });
-
-</script>
 {% endblock %}

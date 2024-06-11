@@ -1,13 +1,10 @@
-.add-to-cart {
-    font-size: larger;
-}
-
 h1 {
     font-weight: bold;
 }
 
 .added {
-    font-weight: bold;
+    background-color: red; 
+    animation: grow 1300ms ease infinite;
 }
 
 .footer_base {
