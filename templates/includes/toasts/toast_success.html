@@ -1,18 +1,38 @@
-<div class="toast custom-toast rounded-0 border-top-0" data-autohide="true">
-    <div class="arrow-up"></div>
-    <div class="w-100 toast-capper bg-success"></div>
-    <div class="toast-header bg-white text-dark">
-        <i class="fas fa-shopping-bag mr-auto"></i>
-        <strong class="mr-auto">Added to Cart</strong>
-        <button class="ml-2 mb-1 close" type="button" data-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+<div class="toast custom-toast rounded-3 border-top-0" data-autohide="true">
+    <div class="w-200 toast-capper bg-success"></div>
+    <div class="toast-header">
+        <i class="fa-solid fa-check mr-auto text-dark"></i>
+        <strong class="mr-auto pl-4">Added to Cart</strong>
+        <button class="mb-1 text-danger position-absolute top-0 end-0 close border-0 bg-transparent" class="btn-close" data-bs-dismiss="toast" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
         </button>
     </div>
     <div class="toast-body">
         <div class="row">
             <div class="col toast-msg text-center">
-                <p class="text-uppercase toast-highlighted font-weight-bolder">{{ message }}</p>
+                <p class="text-capitilize toast-highlighted font-weight-bolder">{{ message }}</p>
             </div>
         </div>
     </div>
-</div>
+
+
+ {% if grand_total and not just_message %}
+        <div class="container mr-auto">
+            <p class="toast-count"><span><strong>Your Cart</strong></span> ({{ product_count }} {% if product_count == 1 %}item{% else %}items{% endif %})</p>
+            <div class="cart-snippet">
+                {% for cart_item in cart_items %}
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            <img src="{{ cart_item.product.image.url }}" alt="{{ cart_item.product.name }}" class="w-50">
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0"><strong>{{ cart_item.product.name }}</strong></p>
+                            <p class="my-0 small text-muted">Qty: {{ cart_item.quantity }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
