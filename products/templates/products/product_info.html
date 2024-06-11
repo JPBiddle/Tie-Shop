@@ -13,7 +13,7 @@
         <br>
         <br>
         <div class="card-body text-end">
-            <h4 class="card-title text-center"> {{ product.name }} </h4>
+            <h4 class="card-title text-center"><u> {{ product.name }} </u></h4>
             <br>
             <p class="card-text text-center"> {{ product.description }}</p>
             <br>
@@ -32,6 +32,16 @@
             <input type="submit" class="btn btn-primary add-to-cart" id="add-to-cart" name="add-to-cart" value="Add to Cart">
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
             </form>
+            <br><br>
+            <h5 class="card-title text-center">Shipping</h5>
+            <p class="card-text text-center">At Monty & Turner, we pride ourselves on providing an exceptional
+                shipping experience that matches the quality of our exquisite ties. Each order is meticulously
+                packaged to ensure your tie arrives in pristine condition, ready to make a stylish statement.
+                Our reliable and efficient service means you can expect your package to
+                arrive on time, every time. Plus, with tracking information provided for every shipment,
+                you can stay informed about your tie's journey from our door to yours. At Monty & Turner, we
+                believe that great style deserves great service, right down to the delivery. Shipping is calculated when 
+                you add products to your cart.</p>
         </div>
     </div>
 </div>
