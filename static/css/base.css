@@ -2,11 +2,6 @@ h1 {
     font-weight: bold;
 }
 
-.added {
-    background-color: red; 
-    animation: grow 1300ms ease infinite;
-}
-
 .footer_base {
     background-color: #cfcdc9;
 }

@@ -49,8 +49,16 @@
                       <a class="nav-link" href="#">Your Account</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{% url 'view_cart' %}">Cart</a>
-                  </li>
+                    <a class="{% if grand_total %} {% else %}text-black{% endif %} nav-link text-center" href="{% url 'view_cart' %}">Cart
+                            <p class="my-0">
+                                {% if grand_total %}
+                                    £{{ grand_total|floatformat:2 }}
+                                {% else %}
+                                    £0.00
+                                {% endif %}
+                            </p>
+                    </a>
+                </li>
               </ul>
           </div>
       </div>
