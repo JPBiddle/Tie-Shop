@@ -1,13 +1,48 @@
+.playfair-display-<uniquifier> {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
+  .lora-<uniquifier> {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+  
+body {
+    font-family: "Lora", serif;
+}
+
 h1 {
+    font-family: "Playfair Display", sans-serif; !important
     font-weight: bold;
 }
 
-.footer_base {
-    background-color: #cfcdc9;
-}
+/* Nav and footer styling */
 
 .nav_base {
-    background-color: #cfcdc9;
+    background-color: #608158;
+    opacity: 0.9;
+}
+
+.nav-link {
+    color: whitesmoke;
+}
+
+.page-head {
+    color: whitesmoke;
+}
+
+.footer_base {
+    background-color: #608158;
+    opacity: 0.9;
+}
+
+.social {
+    color: whitesmoke;
 }
 
 .update-link {
@@ -31,4 +66,8 @@ h1 {
 
 .toast-capper {
     height: 2px;
+}
+
+.cart-table-head {
+    background-color: #dfdfdf;
 }
