@@ -1,48 +1,32 @@
-.playfair-display-<uniquifier> {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  }
-
-  .lora-<uniquifier> {
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  }
-  
 body {
     font-family: "Lora", serif;
 }
 
 h1 {
-    font-family: "Playfair Display", sans-serif; !important
+    font-family: "Playfair Display", sans-serif;
     font-weight: bold;
 }
 
 /* Nav and footer styling */
 
 .nav_base {
-    background-color: #608158;
-    opacity: 0.9;
+    background-color: #529984;
 }
 
 .nav-link {
-    color: whitesmoke;
+    color: white;
 }
 
 .page-head {
-    color: whitesmoke;
+    color: white;
 }
 
 .footer_base {
-    background-color: #608158;
-    opacity: 0.9;
+    background-color: #529984;
 }
 
 .social {
-    color: whitesmoke;
+    color: white;
 }
 
 .update-link {
