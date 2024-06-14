@@ -7,4 +7,21 @@
         <p>FAQ</p>
 </div>
 
+
+{% if subjects %}
+    {% for subject in subjects %}
+        <div>
+            <h2>{{ subject }}</h2>
+
+            <ul>
+                {% for question in questions %}
+                    <li>{{ question.question }} <br /> {{ question.answer }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No subjects found.</p>
+{% endif %}
+
 {% endblock %}
