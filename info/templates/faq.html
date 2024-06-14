@@ -6,21 +6,37 @@
 <div class="container-fluid">
         <p>FAQ</p>
 </div>
-
-
-        
 {% for subject in subjects %}
-<h4>{{ subject }}</h4>
-{% for question in questions %}
-        {% if subject == question.subject %}
-                <ul><strong>{{ question.question }}</strong></ul> 
-                <ul>{{ question.answer }}</ul> 
-        {% endif %}
-{% endfor %}
-{% endfor %}
-        
-        
+<div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading{{ subject.accord }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse{{ subject.accord }}" aria-expanded="false"
+                                aria-controls="flush-collapse{{ subject.accord }}">{{ subject }}</h2>
+                </button>
 
-      
+                </h2>
+                <div id="flush-collapse{{ subject.accord }}" class="accordion-collapse collapse"
+                        aria-labelledby="flush-heading{{ subject.accord }}" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                                {% for question in questions %}
+                                        {% if subject == question.subject %}
+                                                <ul><strong>{{ question.question }}</strong></ul>
+                                                <ul>{{ question.answer }}</ul>
+                                        {% endif %}
+                                {% endfor %}
+                        </div>
+
+
+                </div>
+        </div>
+
+</div>
+</div>
+{% endfor %}
+
+
+
+
 
 {% endblock %}

@@ -1,0 +1,42 @@
+[
+{
+    "model": "info.subject",
+    "pk": 4,
+    "fields": {
+        "subject": "General Questions",
+        "accord": "One"
+    }
+},
+{
+    "model": "info.subject",
+    "pk": 5,
+    "fields": {
+        "subject": "Materials",
+        "accord": "Two"
+    }
+},
+{
+    "model": "info.subject",
+    "pk": 6,
+    "fields": {
+        "subject": "Production",
+        "accord": "Three"
+    }
+},
+{
+    "model": "info.subject",
+    "pk": 7,
+    "fields": {
+        "subject": "Shipping",
+        "accord": "Four"
+    }
+},
+{
+    "model": "info.subject",
+    "pk": 8,
+    "fields": {
+        "subject": "Returns and Exchanges",
+        "accord": "Five"
+    }
+}
+]

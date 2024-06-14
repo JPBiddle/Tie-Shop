@@ -1,0 +1,101 @@
+[
+{
+    "model": "info.question",
+    "pk": 5,
+    "fields": {
+        "subject": 4,
+        "question": "What makes Monty & Turner ties unique?",
+        "answer": "Our ties are handcrafted in Italy using the finest materials and traditional techniques. Each tie is designed to offer exceptional quality, elegance, and durability, making them a perfect addition to any wardrobe."
+    }
+},
+{
+    "model": "info.question",
+    "pk": 6,
+    "fields": {
+        "subject": 4,
+        "question": "Where are Monty & Turner ties made?",
+        "answer": "All Monty & Turner ties are proudly made in Italy. We work with skilled artisans who have generations of experience in tie-making to ensure the highest quality and craftsmanship."
+    }
+},
+{
+    "model": "info.question",
+    "pk": 7,
+    "fields": {
+        "subject": 5,
+        "question": "What materials are used to make Monty & Turner ties?",
+        "answer": "Our ties are made from premium silk, sourced from the finest mills in Italy. We also offer a selection of ties made from shantung, depending on the collection and season."
+    }
+},
+{
+    "model": "info.question",
+    "pk": 8,
+    "fields": {
+        "subject": 5,
+        "question": "Are your ties 100% silk?",
+        "answer": "Yes, our silk ties are 100% silk. We also ensure that our other materials, such as wool and cashmere, are of the highest quality and purity."
+    }
+},
+{
+    "model": "info.question",
+    "pk": 9,
+    "fields": {
+        "subject": 6,
+        "question": "How are Monty & Turner ties made?",
+        "answer": "Our ties are handcrafted by expert artisans in Italy. Each tie undergoes a meticulous process that includes cutting, stitching, and finishing by hand to ensure the highest standards of quality and craftsmanship."
+    }
+},
+{
+    "model": "info.question",
+    "pk": 10,
+    "fields": {
+        "subject": 6,
+        "question": "Are your ties handmade?",
+        "answer": "Yes, Monty & Turner ties are handmade. We pride ourselves on the traditional craftsmanship that goes into each tie, ensuring that every piece is unique and of exceptional quality."
+    }
+},
+{
+    "model": "info.question",
+    "pk": 11,
+    "fields": {
+        "subject": 7,
+        "question": "What are your shipping options?",
+        "answer": "We offer a variety of shipping options to meet your needs. These include standard shipping, express shipping, and international shipping. Shipping times and costs will vary depending on your location and the selected shipping method."
+    }
+},
+{
+    "model": "info.question",
+    "pk": 12,
+    "fields": {
+        "subject": 7,
+        "question": "Do you ship internationally?",
+        "answer": "Yes, we ship our ties worldwide. Please note that international shipping times and costs may vary based on the destination country."
+    }
+},
+{
+    "model": "info.question",
+    "pk": 13,
+    "fields": {
+        "subject": 7,
+        "question": "How long does it take to receive my order?",
+        "answer": "Standard shipping typically takes 5-7 business days within the United Kingdom. Express shipping options are available for faster delivery. International shipping times vary by destination, usually taking between 7-14 business days."
+    }
+},
+{
+    "model": "info.question",
+    "pk": 14,
+    "fields": {
+        "subject": 8,
+        "question": "What is your return policy?",
+        "answer": "We want you to be completely satisfied with your purchase. If for any reason you are not happy with your tie, you can return it within 30 days of receipt for a full refund or exchange. The tie must be in its original condition and packaging."
+    }
+},
+{
+    "model": "info.question",
+    "pk": 15,
+    "fields": {
+        "subject": 8,
+        "question": "Do you offer exchanges?",
+        "answer": "Yes, we offer exchanges. If you would like to exchange your tie for a different one, please follow the return process and specify the tie you would like to receive in exchange. We will ship the new tie once we receive the original item."
+    }
+}
+]
