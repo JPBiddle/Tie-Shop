@@ -1,6 +1,6 @@
 from django.db import models
 
-class Faq(models.Model):
+class Subject(models.Model):
 
     subject = models.CharField(max_length=100)
 
@@ -12,7 +12,7 @@ class Faq(models.Model):
 
 class Question(models.Model):
 
-    subject = models.ForeignKey(Faq, on_delete=models.CASCADE, default='')
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, default='')
     question = models.CharField(max_length=600)
     answer = models.TextField()
 

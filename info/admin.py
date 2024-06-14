@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Faq, Question
+from .models import Subject, Question
 
-admin.site.register(Faq)
+admin.site.register(Subject)
 admin.site.register(Question)
 
