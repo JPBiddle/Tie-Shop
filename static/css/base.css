@@ -55,3 +55,45 @@ h1 {
 .cart-table-head {
     background-color: #dfdfdf;
 }
+
+.btn-secondary {
+    background-color: #7cad9f;
+    border-color: #7cad9f;
+}
+
+.btn-check:focus+.btn-secondary, .btn-secondary:focus {
+    background-color: #54776d;
+    box-shadow: none;
+}
+
+.search-btn {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+.search-btn:hover {
+    border-color: #6c757d;
+    background-color: #54776d;
+    color: white;
+}
+
+
+.add-to-cart {
+    background-color: #7cad9f;
+    border-color: #7cad9f;
+}
+
+.add-to-cart:hover {
+    background-color: #54776d;
+    border-color: #54776d;
+}
+
+.nav-link:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.nav-link:focus {
+    color: white;
+    transform: scale(1.2);
+}
