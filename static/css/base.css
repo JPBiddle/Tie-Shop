@@ -97,3 +97,7 @@ h1 {
     color: white;
     transform: scale(1.2);
 }
+
+.social:focus {
+    color: white;
+}
