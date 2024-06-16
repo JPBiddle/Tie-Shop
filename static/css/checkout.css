@@ -13,7 +13,15 @@
   box-shadow: 0 1px 3px 0 #ced4da;
 }
 
+select,
+select option {
+  color:#6c757d !important;
+}
 
+select:invalid,
+select option[value=""] {
+  color: #6c757d !important;
+}
 
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
