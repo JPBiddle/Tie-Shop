@@ -16,23 +16,24 @@
 {% block content %}
 
 <div class="overlay"></div>
+<br>
+<br>
 <div class="container">
     <div class="row">
-        <div class="col">
-            <hr>
-            <h2 class="logo-font mb-4 test">Order Successful</h2>
-            <hr>
-            <p>Please see your order information below:</p>
+        <div class="col text-center">
+            <h3 class="logo-font mb-4 test">Order Successful</h3>
+            <h4 class="text-left">Please see your order information below:</h4>
         </div>
     </div>
 </div>
+<br>
 
 <div class="row mx-auto">
     <div class="col-12 col-lg-7 text-right mx-auto">
         <div class="order-confirmation-wrapper p-2 border">
             <div class="row">
                 <div class="col">
-                    <p class="text-muted">Order Info:</p>
+                    <p class="text-muted"><u>Order Info:</u></p>
                 </div>
             </div>
 
@@ -55,7 +56,7 @@
 
             <div class="row">
                 <div class="col">
-                    <p class="text-muted">Order Details:</p>
+                    <p class="text-muted"><u>Order Details:</u></p>
                 </div>
             </div>
 
@@ -65,7 +66,7 @@
                     <p class=" mb-0 font-weight-bold">{{ item.product.name }}</p>
                 </div>
                 <div class="col-12 col-md-8 text-md-right">
-                    <p class=" mb-0">{{ item.quantity }} at £{{ item.product.price }} each</p>
+                    <p class=" mb-0">Quantity: {{ item.quantity }} (£{{ item.product.price }} each)</p>
                 </div>
             </div>
             {% endfor %}
@@ -74,7 +75,7 @@
 
             <div class="row">
                 <div class="col">
-                    <p class="text-muted">Shipping To:</p>
+                    <p class="text-muted"><u>Shipping To:</u></p>
                 </div>
             </div>
 
@@ -86,14 +87,14 @@
                     <p class="mb-0">{{ order.full_name }}</p>
                 </div>
                 <div class="col-12 col-md-4">
-                    <p class="mb-0 font-weight-bold">Address 1</p>
+                    <p class="mb-0 font-weight-bold">Address Line 1</p>
                 </div>
                 <div class="col-12 col-md-8 text-md-right">
                     <p class="mb-0">{{ order.street_address1 }}</p>
                 </div>
                 {% if order.street_address2 %}
                 <div class="col-12 col-md-4">
-                    <p class="mb-0 font-weight-bold">Address 2</p>
+                    <p class="mb-0 font-weight-bold">Address Line 2</p>
                 </div>
                 <div class="col-12 col-md-8 text-md-right">
                     <p class="mb-0">{{ order.street_address2 }}</p>
@@ -139,7 +140,7 @@
 
             <div class="row">
                 <div class="col">
-                    <p class="text-muted">Billing Info:</p>
+                    <p class="text-muted"><u>Billing Info:</u></p>
                 </div>
             </div>
             <div class="row">
@@ -163,8 +164,21 @@
                 </div>
             </div>
         </div>
+        <br>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <a href="{% url 'products' %}" class="btn btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Return to shop</span>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
+<br>
+
 
 
 {% endblock %}
