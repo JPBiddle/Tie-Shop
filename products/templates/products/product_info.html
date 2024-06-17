@@ -2,13 +2,12 @@
 {% load static %}
 
 {% block content %}
-
-<div class="card mb-3 pt-3">
-    <div class="row g-0">
-        <div class="col-md-4">
-            <img src="{{ product.image_2.url }}" class="img-fluid ms-5" alt="{{ product.name }}">
+<div class="card mb-4 border-0">
+    <div class="row g-0 justify-content-md-center">
+        <div class="col-md-3">
+            <img src="{{ product.image_2.url }}" class="img-fluid" alt="{{ product.name }}">
         </div>
-        <div class="col-md-6 mx-4">
+        <div class="col-md-3 mx-3">
             <br>
             <br>
             <div class="card-body text-end">
@@ -17,7 +16,6 @@
                 <p class="card-text text-center"> {{ product.description }}</p>
                 <br>
                 <h5 class="card-text"> £{{ product.price }}</h5>
-
                 <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="d-flex align-items-end flex-column">
@@ -34,7 +32,15 @@
                     </div>
                 </form>
             </div>
-            <br><br>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+        <div class="card border-0 mb-5">
+            <i class="fa-solid fa-truck-fast fa-2xl text-center text-success"></i>
+            <br>
+
             <h5 class="card-title text-center">Shipping</h5>
             <p class="card-text text-center">At Monty & Turner, we pride ourselves on providing an exceptional
                 shipping experience that matches the quality of our exquisite ties. Each order is meticulously
@@ -42,8 +48,11 @@
                 Our reliable and efficient service means you can expect your package to
                 arrive on time, every time. Plus, with tracking information provided for every shipment,
                 you can stay informed about your tie's journey from our door to yours. At Monty & Turner, we
-                believe that great style deserves great service, right down to the delivery. Shipping is calculated when
+                believe that great style deserves great service, right down to the delivery. Shipping is calculated
+                when
                 you add products to your cart.</p>
         </div>
     </div>
-    {% endblock %}
+</div>
+
+{% endblock %}
