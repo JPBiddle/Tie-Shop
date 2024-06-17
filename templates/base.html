@@ -57,13 +57,13 @@
             <a class="nav-link" href="{% url 'products' %}"><h5>Shop</h5></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><h5>Sign Up</h5></a>
+            <a class="nav-link" href="{% url 'account_signup' %}"><h5>Sign Up</h5></a>
           </li>
         </ul>
         <h1 class="page-head">Monty & Turner's</h1>
         <ul class="navbar-nav ml-auto px-3 text-center">
           <li class="nav-item">
-            <a class="nav-link mx-2" href="#"><i class="fa-solid fa-user fa-xl"></i><div><h5>Your Account</h5></div></a>
+            <a class="nav-link mx-2" href="{% url 'profile' %}"><i class="fa-solid fa-user fa-xl"></i><div><h5>Your Account</h5></div></a>
             
           </li>
           <li class="nav-item">
@@ -98,7 +98,7 @@
   {% endblock %}
 
 
-  <footer class="text-center footer_base">
+  <footer class="text-center footer_base mt-5">
     <div>
       <br>
       <section>

@@ -78,6 +78,18 @@ h1 {
 }
 
 
+.btn-general {
+    background-color: #7cad9f;
+    border-color: #7cad9f;
+    color: white;
+}
+
+.btn-general:hover {
+    background-color: #54776d;
+    border-color: #54776d;
+    color: white;
+}
+
 .add-to-cart {
     background-color: #7cad9f;
     border-color: #7cad9f;
