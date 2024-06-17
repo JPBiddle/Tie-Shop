@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 
+from products.models import Product
 from .models import UserProfile
 from .forms import UserProfileForm
 
@@ -45,3 +46,17 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+def add_wishlist(request, id):
+    product = get_object_or_404(Product, id=id)
+    redirect_url = request.POST.get('redirect_url')
+    if product.add_wishlist.filter(id=request.user.id).exists():
+        product.add_wishlist.remove(request.user)
+    else:
+        product.add_wishlist.add(request.user)
+
+    context = {
+        'user': user,
+        'product': product,
+    }
+    return redirect(redirect_url, context)

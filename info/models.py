@@ -3,7 +3,7 @@ from django.db import models
 class Subject(models.Model):
 
     subject = models.CharField(max_length=100)
-    accord = models.CharField(max_length=10, default='')
+    accord = models.CharField(max_length=10, default='') 
 
     def __str__(self):
         return self.subject

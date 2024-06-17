@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<br>
+<br>
+
+<!--Top level titles for free delivery and cart -->
+
+<br>
+<div class="container mb-2">
+    <div class="row">
+
+        <div class="col text-center">
+            <h3>Your Favourite Items</h3>
+        </div>
+    </div>
+<br><br>
+
+<!--Table containing column titles -->
+    <div class="row">
+        <div class="col">
+            {% if wishlist %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black cart-table-head">
+                        <tr>
+                            <th scope="col">Product Name</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                        </tr>
+                    </thead>
+
+
+<!--Content for the table containing items added to cart-->
+
+                    {% for item in wishlist %}
+                    <tr>
+                        <td class="p-5 w-25">
+                            <img class="img-fluid rounded" src="{{ wishlist.product.image.url }}">
+                        </td>
+                        <td class="py-5">
+                            <p class="my-0">{{ wishlist.product.name }}</p>
+                        </td>
+                        <td class="py-5">
+                            <p class="my-0">£{{ wishlist.product.price }}</p>
+                        </td>
+                        
+                            
+<!--Add or remove from cart-->
+
+                        <td class="py-5 w-25">                            
+                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+<!--Return to shop button or continue to checkout-->
+
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <a href="{% url 'profile' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span>Return to account</span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+<!--If wishlist is empty this will display-->
+
+            {% else %}
+            <p class="lead mb-5">Your wishlist is empty.</p>
+            <a href="{% url 'products' %}" class="btn btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span>Go back</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+{% endblock %}
