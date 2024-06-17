@@ -114,4 +114,8 @@ h1 {
     color: white;
 }
 
-
+.authy-text-link {
+    text-decoration: underline;
+    color: #54776d;
+    font-weight: bold;
+}

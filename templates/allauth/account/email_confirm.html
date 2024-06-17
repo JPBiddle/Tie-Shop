@@ -16,7 +16,7 @@
 {% user_display confirmation.email_address.user as user_display %}
 
 {% if can_confirm %}
-<p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{
+<p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a class="authy-text-link" href="mailto:{{ email }}">{{
         email }}</a> is an email address for user {{ user_display }}.{% endblocktrans %}</p>
 
 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
@@ -32,7 +32,7 @@
 
 {% url 'account_email' as email_url %}
 
-<p>{% blocktrans %}This email confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new
+<p>{% blocktrans %}This email confirmation link expired or is invalid. Please <a class="authy-text-link" href="{{ email_url }}">issue a new
         email confirmation request</a>.{% endblocktrans %}</p>
 <br><br><br>
 {% endif %}
