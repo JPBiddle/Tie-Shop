@@ -1,0 +1,21 @@
+Hello {{ order.full_name }},
+
+Thank you for shopping with Monty & Turner! We are pleased to confirm that your order has been received and is currently being processed. Below are the details of your order:
+
+Order Details:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+Order Total: £{{ order.order_total }}
+Delivery Cost: £{{ order.delivery_cost }}
+Grand Total: £{{ order.grand_total }}
+
+
+If you have any questions or need further assistance, please do not hesitate to contact our customer service team at {{ contact_email }}.
+
+Thank you for choosing Monty & Turner!
+
+Best regards,
+The Monty & Turner Team
+
+Monty & Turner

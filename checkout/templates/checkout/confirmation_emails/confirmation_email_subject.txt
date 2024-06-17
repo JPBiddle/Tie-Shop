@@ -1,0 +1,1 @@
+Monty & Turner Order Confirmation #{{ order.order_number|truncatechars:8 }}
