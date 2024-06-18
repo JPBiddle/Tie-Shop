@@ -1,6 +1,7 @@
-from django.shortcuts import redirect, render, get_object_or_404
+from django.shortcuts import redirect, render, reverse, get_object_or_404
 from .models import Product, Colour, Category
 from django.db.models import Q
+from django.contrib import messages
 
 from .forms import ProductForm
 
@@ -52,7 +53,16 @@ def search(request):
 
 def add_product(request):
     """ Add a product to the store """
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'New product added!')
+            return redirect(reverse(add_product))
+        else:
+            messages.error(request, 'Failed to add new product, please check form is valid.')
+    else:
+        form = ProductForm()
     template = 'products/add_product.html'
     context = {
         'form': form,

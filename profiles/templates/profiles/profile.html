@@ -25,7 +25,20 @@
         <div class="col-4">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                        <a class="btn-general btn btn-info" href="">Product Management</a>
+                <div class="btn-group">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'add_product' %}">Add Product</a></li>
+                        <li><a class="dropdown-item" href="">Edit Product</a></li>
+                        <li><a class="dropdown-item" href="">Delete Product</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="">Add FAQ</a></li>
+                        <li><a class="dropdown-item" href="">Edit FAQ</a></li>
+
+                    </ul>
+                </div>
             {% endif %}
         {% endif %}
             <a class="btn-general btn btn-info" href=""><i class="fa-solid fa-heart"></i> Favourites</a>
