@@ -1,16 +1,23 @@
 from django.db import models
+from django.db.models import Q
 import datetime
 
 
 # Category of product
 class Category(models.Model):
+    
+    class Meta:
+        verbose_name_plural = 'categories'
+
     name = models.CharField(max_length=40)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
 
-    class Meta:
-        verbose_name_plural = 'categories'
+    def get_friendly_name(self):
+        return self.friendly_name
+    
 
 class Colour(models.Model):
     name = models.CharField(max_length=20)
