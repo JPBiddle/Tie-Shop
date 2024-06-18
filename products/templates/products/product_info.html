@@ -37,7 +37,7 @@
                     <div>
                         <br>
                         <a class="btn-general btn btn-info" href="{% url 'edit_product' product.id %}">Edit Product</a>
-                        <a class="btn-danger btn btn-info" href="">Delete Product</a>
+                        <a class="btn-danger btn btn-info" href="{% url 'delete_product' product.id %}">Delete Product</a>
                     </div>
                 </div>
                 {% endif %}
