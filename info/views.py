@@ -36,3 +36,9 @@ def add_faq(request):
     }
 
     return render(request, template, context)
+
+def delete_faq(request, question_id):
+    subject = get_object_or_404(Question, pk=question_id)
+    subject.delete()
+    messages.success(request, 'Q&A has been deleted.')
+    return redirect(reverse('faq'))
