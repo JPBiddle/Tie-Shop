@@ -33,7 +33,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
     colour = models.ForeignKey(Colour, on_delete=models.CASCADE, default='')
     # Set description to 750 chars, enabled to be empty and empty by default
-    description = models.CharField(max_length=750, default='', blank=True, null=True)
+    description = models.TextField(max_length=750, default='', blank=True, null=True)
     image = models.ImageField(upload_to='uploads/product/')
     image_2 = models.ImageField(upload_to='uploads/product/')
     product_id = models.CharField(max_length=10, default='')
