@@ -1,5 +1,13 @@
+html {
+    height: 100%;
+}
+
 body {
     font-family: "Lora", serif;
+    background-size: cover;
+    margin:0;
+    padding:0;
+    height: 100vh;
 }
 
 h1 {
@@ -23,6 +31,11 @@ h1 {
 
 .footer_base {
     background-color: #529984;
+    position: sticky;
+    top: 100vh;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .social {

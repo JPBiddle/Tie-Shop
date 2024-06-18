@@ -3,9 +3,17 @@
 
 {% block content %}
 
+<br>
 <div class="container-fluid">
-        <p>FAQ</p>
+        <div class="row">
+
+                <div class="col text-center">
+                        <h3>FAQ</h3>
+                </div>
+                <hr class="w60">
+        </div>
 </div>
+<br><br>
 {% for subject in subjects %}
 <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
@@ -31,12 +39,13 @@
                         <div class="accordion-body">
                                 {% for question in questions %}
                                         {% if subject == question.subject %}
-                                        <ul><strong>{{ question.question }}</strong></ul>
-                                        <ul>{{ question.answer }}</ul>
-                                        <br>
+                                                <ul><strong>{{ question.question }}</strong></ul>
+                                                <ul>{{ question.answer }}</ul>
+                                                <br>
                                                 <div class="d-flex flex-row-reverse">
-                                                <a class="btn-danger btn btn-info p-2 mx-1" href="{% url 'delete_faq' question.id %}">Delete Q&A</a>
-                                                <a class="btn-general btn btn-info p-2 mx-1" href="">Edit Q&A</a>
+                                                        <a class="btn-danger btn btn-info p-2 mx-1"
+                                                                href="{% url 'delete_faq' question.id %}">Delete Q&A</a>
+                                                        <a class="btn-general btn btn-info p-2 mx-1" href="">Edit Q&A</a>
                                                 </div>
                                         {% endif %}
                                 {% endfor %}
@@ -48,17 +57,15 @@
                         <div class="accordion-body">
                                 {% for question in questions %}
                                         {% if subject == question.subject %}
-                                        <ul><strong>{{ question.question }}</strong></ul>
-                                        <ul>{{ question.answer }}</ul>
+                                                <ul><strong>{{ question.question }}</strong></ul>
+                                                <ul>{{ question.answer }}</ul>
                                         {% endif %}
                                 {% endfor %}
                         </div>
                 </div>
                 {% endif %}
         </div>
-        
-
-</div>
+        </div>
 </div>
 {% endfor %}
 
