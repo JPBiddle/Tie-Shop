@@ -131,3 +131,63 @@ h1 {
     text-decoration: underline;
     color: #0cbd8b;
 }
+
+.modal-confirm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: none;
+    border-radius: 10px;
+    z-index: 99;
+    background-color: rgba(12, 189, 139, 0.9);
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal-confirm.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 0.5rem 1rem !important;
+    height: 3rem;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 50px;
+    font-family: "Lora", serif;
+    color: white;
+
+}
+
+.modal-text {
+    color: white;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    pointer-events: all;
+    opacity: 1;
+}
