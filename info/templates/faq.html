@@ -43,11 +43,10 @@
                                                 <ul>{{ question.answer }}</ul>
                                                 <br>
                                                 <div class="d-flex flex-row-reverse">
-                                                        <a class="btn-danger btn btn-info p-2 mx-1"
-                                                                href="{% url 'delete_faq' question.id %}">Delete Q&A</a>
-                                                        <a class="btn-general btn btn-info p-2 mx-1" href="">Edit Q&A</a>
+                                                        <a class="btn-general btn btn-info p-2 mx-1" href="{% url 'edit_faq' question.id %}">Edit Q&A</a>
                                                 </div>
                                         {% endif %}
+                                        
                                 {% endfor %}
                         </div>
                 </div>
@@ -68,9 +67,8 @@
         </div>
 </div>
 {% endfor %}
+{% endblock %}
 
 
-
-
-
+{% block postloadjs %}
 {% endblock %}

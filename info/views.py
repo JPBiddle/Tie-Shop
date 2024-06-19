@@ -42,3 +42,26 @@ def delete_faq(request, question_id):
     subject.delete()
     messages.success(request, 'Q&A has been deleted.')
     return redirect(reverse('faq'))
+
+def edit_faq(request, question_id):
+    """ Edit FAQ question and answer"""
+    question = get_object_or_404(Question, pk=question_id)
+    if request.method == 'POST':
+        form = QuestionForm(request.POST, request.FILES, instance=question)
+        if form.is_valid():
+            question = form.save()
+            messages.success(request, 'FAQ successfully updated!')
+            return redirect(reverse('faq'))
+        else:
+            messages.error(request, 'FAQ edit failed. Please ensure the form is valid.')
+    else:
+        form = QuestionForm(instance=question)
+        messages.info(request, f'You are editing {question.question}')
+
+    template = 'edit_faq.html'
+    context = {
+        'form': form,
+        'question': question,
+    }
+
+    return render(request, template, context)
