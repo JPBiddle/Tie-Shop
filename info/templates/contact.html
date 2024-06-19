@@ -1,19 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_js %}
-<script src="{% static 'js/email.js' %}"></script>
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "uh6r9lNRNMcxZ6Jwm",
-      });
-   })();
-</script>
-{% endblock %}
 {% block content %}
 
 <div class="container-fluid">
@@ -38,7 +25,7 @@
                                         <br>
                                         <textarea class="form-control " name="message" id="message" placeholder="Compose your message..." aria-label="Enter Message" rows="5" required></textarea>
                                         <br>
-                                        <button onclick="Contact()" class="btn btn-general" aria-label="Submit Button" value="Send">Send Message</button>
+                                        <button onclick="Contact()" class="btn btn-general" aria-label="Submit Button">Send Message</button>
                                     </form>
                                 </div>
                             </div>
@@ -46,4 +33,34 @@
                 </div>
         </div>
 </div>
+
+<!-- Modal for successfully sent message  -->
+<div class="modal-confirm" id="modal">
+        <div class="modal-header">
+                <div class="title">
+                <h3 class="modal-text">Message sent!</h3>
+                </div>
+                <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+                <h5 class="modal-text">Your message has been sent to our customer service team!</h5>
+        </div>
+</div>
+<div id="overlay"></div>
+{% endblock %}
+
+{% block postloadjs %}
+<script src="{% static 'js/modal.js' %}"></script>
+<script src="{% static 'js/email.js' %}"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+        (function(){
+           emailjs.init({
+             publicKey: "uh6r9lNRNMcxZ6Jwm",
+           });
+        })();
+     </script>
+
 {% endblock %}
