@@ -26,7 +26,10 @@ h1 {
 }
 
 .page-head {
+    padding-left: 4rem;
     color: white;
+    text-align: center;
+    font-size: 3.5rem;
 }
 
 .footer_base {

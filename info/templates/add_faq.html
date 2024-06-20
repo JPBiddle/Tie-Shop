@@ -10,18 +10,17 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="col-12">
-                <hr>
-                <h3 class="logo-font mb-4">Add FAQ</h3>
-                <hr>
-            </div>
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <div class="col-md-5 mx-auto">
+            <h3 class="logo-font mb-4">Add FAQ</h3>
+            <hr class="w60">
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col-12 col-md-6">
+    <div class="row">
+        <div class="col-12 col-md-5 mx-auto">
                 <form method="POST" action="{% url 'add_faq' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
