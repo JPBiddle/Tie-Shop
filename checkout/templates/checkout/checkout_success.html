@@ -16,6 +16,7 @@
 {% block content %}
 
 <!-- Top level title -->
+
 <div class="overlay"></div>
 <br>
 <br>
@@ -28,7 +29,9 @@
     </div>
 </div>
 <br>
+
 <!-- Table containing order info -->
+
 <div class="row mx-auto">
     <div class="col-12 col-lg-7 text-right mx-auto">
         <div class="order-confirmation-wrapper p-2 border">
@@ -37,7 +40,6 @@
                     <p class="text-muted"><u>Order Info:</u></p>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-12 col-md-4">
                     <p class="mb-0 font-weight-bold">Order Number</p>
@@ -52,14 +54,14 @@
                     <p class="mb-0">{{ order.date }}</p>
                 </div>
             </div>
-
             <hr>
-
             <div class="row">
                 <div class="col">
                     <p class="text-muted"><u>Order Details:</u></p>
                 </div>
             </div>
+
+<!-- Iterate through line items -->
 
             {% for item in order.lineitems.all %}
             <div class="row">
@@ -71,15 +73,15 @@
                 </div>
             </div>
             {% endfor %}
-
             <hr>
+
 <!-- Users shipping information -->
+
             <div class="row">
                 <div class="col">
                     <p class="text-muted"><u>Shipping To:</u></p>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-12 col-md-4">
                     <p class="mb-0 font-weight-bold">Full Name</p>
@@ -136,9 +138,10 @@
                     <p class="mb-0">{{ order.phone_number }}</p>
                 </div>
             </div>
-
             <hr>
+
 <!-- Info for billing / order total and shipping costs -->
+
             <div class="row">
                 <div class="col">
                     <p class="text-muted"><u>Billing Info:</u></p>
@@ -166,7 +169,9 @@
             </div>
         </div>
         <br>
+
 <!-- Buttons to return to profile or shop -->
+
         <div class="row">
             <div class="col-12 col-md-4">
                 {% if from_profile %}
@@ -189,7 +194,5 @@
     </div>
 </div>
 <br>
-
-
 
 {% endblock %}

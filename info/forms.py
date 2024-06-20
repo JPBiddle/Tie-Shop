@@ -3,7 +3,7 @@ from .models import Subject, Question
 
 
 class QuestionForm(forms.ModelForm):
-
+    #Form for question and answer
     class Meta:
         model = Question
         fields = '__all__'

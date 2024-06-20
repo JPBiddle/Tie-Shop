@@ -15,14 +15,13 @@ def thankyou(request):
     return render(request, 'thankyou.html')
 
 def subject(request):
-
     subjects = Subject.objects.all()
     questions = Question.objects.all()
 
     return render(request, 'faq.html', {'subjects':subjects, 'questions':questions})
 
 def add_faq(request):
-    """ Add new faq question and answer """
+    #Add new faq question and answer
     if request.method == 'POST':
         form = QuestionForm(request.POST)
         if form.is_valid():
@@ -41,13 +40,14 @@ def add_faq(request):
     return render(request, template, context)
 
 def delete_faq(request, question_id):
+    #Delete FAQ entry
     subject = get_object_or_404(Question, pk=question_id)
     subject.delete()
     messages.success(request, 'Q&A has been deleted.')
     return redirect(reverse('faq'))
 
 def edit_faq(request, question_id):
-    """ Edit FAQ question and answer"""
+    #Edit FAQ question and answer
     question = get_object_or_404(Question, pk=question_id)
     if request.method == 'POST':
         form = QuestionForm(request.POST, request.FILES, instance=question)

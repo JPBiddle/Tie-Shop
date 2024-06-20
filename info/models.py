@@ -1,7 +1,7 @@
 from django.db import models
 
 class Subject(models.Model):
-
+    # Model containing subject categories for FAQ
     subject = models.CharField(max_length=100)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -13,9 +13,8 @@ class Subject(models.Model):
 
 
 class Question(models.Model):
-
+    # Model containing question and answers, linked to subject model
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, default='')
-    
     question = models.CharField(max_length=600)
     answer = models.TextField()
 

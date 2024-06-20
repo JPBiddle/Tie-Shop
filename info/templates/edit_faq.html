@@ -1,25 +1,20 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
+
+<!-- Title for edit FAQ -->
 
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row no-gutters">
         <div class="col-md-5 mx-auto">
             <h3 class="logo-font mb-4 align-self-start">Edit FAQ</h3>
-            
             <hr class="w60">
         </div>
     </div>
+
+<!-- Form for editing FAQ, buttons for edit and delete under form -->
 
     <div class="row">
         <div class="col-12 col-md-5 mx-auto">
@@ -32,11 +27,16 @@
                         <button class="btn btn-general float-right" type="submit">Update FAQ</button>
                     </div>
                 </form>
+
+<!-- Delete button to trigger modal -->
+ 
                 <button class="btn-danger btn btn-info" data-modal-target="#modal">Delete FAQ</button>
             </div>      
         </div>
     </div>
-    <!-- Modal for delete  -->
+
+<!-- Modal for delete  -->
+
 <div class="modal-confirm" id="modal">
     <div class="modal-header">
         <div class="title">

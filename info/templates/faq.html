@@ -3,11 +3,12 @@
 
 {% block content %}
 
+<!-- Title for FAQ -->
+
 <div class="container-fluid">
         <div class="col-md-5 mx-auto my-5">
                 <div class="container-fluid">
                         <div class="row">
-
                                 <div class="col text-center">
                                         <h3>FAQ</h3>
                                 </div>
@@ -16,6 +17,9 @@
                 </div>
         </div>
 </div>
+
+<!-- Iterate through FAQ's -->
+
 {% for subject in subjects %}
 <div class="row">
         <div class="col-12 col-md-5 mx-auto">
@@ -26,6 +30,9 @@
                                                 data-bs-target="#flush-collapse{{ subject.id }}" aria-expanded="false"
                                                 aria-controls="flush-collapse{{ subject.id }}">{{ subject }}</h2>
                                         </button>
+
+<!-- If user is super, display with edit button -->
+ 
                                 {% if request.user.is_superuser %}
                                 <div id="flush-collapse{{ subject.id}}" class="accordion-collapse collapse"
                                         aria-labelledby="flush-heading{{ subject.id }}" data-bs-parent="#accordionFlushExample">
@@ -42,6 +49,9 @@
                                                 {% endfor %}
                                         </div>
                                 </div>
+
+<!-- If user is not super, display without edit button -->
+
                                 {% else %}
                                 <div id="flush-collapse{{ subject.id}}" class="accordion-collapse collapse"
                                         aria-labelledby="flush-heading{{ subject.id }}" data-bs-parent="#accordionFlushExample">

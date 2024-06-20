@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block extra_js %}
+<!-- EmailJS script direct from EmailJS install docs -->
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
@@ -16,22 +17,26 @@
 
 {% block content %}
 
+<!-- Title for contact page -->
+
 <div class="container-fluid">
         <div class="col-md-5 mx-auto my-5">
                 <div class="container-fluid">
                         <div class="row">
-
                                 <div class="col text-center">
                                         <h3>Contact Us</h3>
                                 </div>
                                 <hr class="w60">
                         </div>
+
+<!-- Contact form input -->
+
                         <div>
                                 <div class="col-12 contact-form contact-text form-group">
-                                    <h4>Contact form</h4>
-                                    <p class="text-muted m-0">Complete the below contact form and a member of our customer support team will be in touch.</p>
-                                    <hr class="w60">
-                                    <form id="contactForm" aria-label="Contact Form">                                
+                                        <h4>Contact form</h4>
+                                        <p class="text-muted m-0">Complete the below contact form and a member of our customer support team will be in touch.</p>
+                                        <hr class="w60">
+                                        <form id="contactForm" aria-label="Contact Form">                                
                                         <input class="form-control " type="text" name="from_name" id="from_name" placeholder="Name" aria-label="Enter Name" required>
                                         <br>
                                         <input class="form-control " type="email" name="from_email" id="from_email" placeholder="Email" aria-label="Enter Email" required>
@@ -39,7 +44,7 @@
                                         <textarea class="form-control " name="message" id="message" placeholder="Compose your message..." aria-label="Enter Message" rows="5" required></textarea>
                                         <br>
                                         <button onclick="Contact()" class="btn btn-general" aria-label="Submit Button" type="button" >Send Message</button>
-                                    </form>
+                                        </form>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +54,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-
+<!-- Email javascript -->
 <script src="{% static 'js/email.js' %}"></script>
-
+<!-- Credit for EmailJS help: https://www.youtube.com/watch?v=bMq2riFCF90 -->
 {% endblock %}
