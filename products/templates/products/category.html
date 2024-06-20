@@ -3,6 +3,8 @@
 
 {% block content %}
 
+<!-- Title containing current selected material category -->
+
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
@@ -19,6 +21,9 @@
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Shop by colour
                 </a>
+
+<!-- Dropdown with each colour category -->
+
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <li><a class="dropdown-item" href="{% url 'products' %}">All</a></li>
                     <li><a class="dropdown-item" href="{% url 'colour' 'Orange' %}">Orange</a></li>
@@ -30,6 +35,9 @@
                     <li><a class="dropdown-item" href="{% url 'colour' 'Blue' %}">Blue</a></li>
                     <li><a class="dropdown-item" href="{% url 'colour' 'Red' %}">Red</a></li>
                 </ul>
+
+<!-- Dropdown for material -->
+    
                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Shop by material
@@ -42,6 +50,8 @@
         </div>
     </div>
 </div>
+
+<!-- Display products in material selected -->
 
 <div class="row">
     <div class="product-container col-12">
@@ -65,7 +75,7 @@
                     </div>
                 </div>
             </div>
-                {% endfor %}
+            {% endfor %}
             </div>
         </div>
     </div>

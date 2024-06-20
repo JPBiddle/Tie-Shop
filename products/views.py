@@ -6,41 +6,39 @@ from django.contrib import messages
 from .forms import ProductForm
 
 def all_products(request):
-
+    """ Show all products """
     products = Product.objects.all()
     return render(request, 'products/products.html', {'products':products})
 
 
 def product_info(request, product_id):
-
+    """ Get individual product for product info page """
     product = get_object_or_404(Product, pk=product_id)
     return render(request, 'products/product_info.html', {'product':product})
 
 def colour(request, blub):
-
+    """ Get colour for selecting via dropdown menu """
     try: 
         colour = Colour.objects.get(name=blub)
         products = Product.objects.filter(colour=colour)
         return render(request, 'products/colour.html', {'products':products, 'colour':colour})
 
-
     except:
         return redirect('products/products.html')
 
 def category(request, plob):
-
+    """ Get material for selecting via dropdown menu """
     try: 
         category = Category.objects.get(name=plob)
         products = Product.objects.filter(category=category)
         return render(request, 'products/category.html', {'products':products, 'category':category})
-
 
     except:
         return redirect('products/products.html')
 
 
 def search(request):
-
+    """ Search for match in users search term """
     if request.method == "POST":
         searched = request.POST['searched']
         products = Product.objects.filter(Q(name__contains=searched)|Q(description__contains=searched))

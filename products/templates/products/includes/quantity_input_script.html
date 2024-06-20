@@ -1,7 +1,7 @@
 <script>
 
     function handleEnableDisable(itemId) {
-        // pass item id into function to get current input value
+        // get current input value from item id
         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
         var max_stock = $(`#id_qty_${itemId}`).attr('max');
 

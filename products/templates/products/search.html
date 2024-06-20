@@ -3,6 +3,8 @@
 
 {% block content %}
 
+<!-- Title for search results -->
+
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
@@ -14,6 +16,8 @@
 
 {% if searched %}
 
+<!-- Display what user searched for -->
+
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
@@ -22,12 +26,15 @@
     </div>
 </div>
 
+<!-- If no search results -->
+
 {% if products|length < 1 %}
                     <div>
-                        <p>No search results, please try again!
-                        </p>
+                        <p>No search results, please try again!</p>
                     </div>
 {% endif %}
+
+<!-- Display search results -->
 
 <div class="row">
     <div class="product-container col-12">
@@ -51,11 +58,12 @@
                     </div>
                 </div>
             </div>
-                {% endfor %}
+            {% endfor %}
             </div>
         </div>
     </div>
 </div>
+
 {% else %}
     <p>No search results</p>
 {% endif %}
