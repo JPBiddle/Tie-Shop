@@ -76,3 +76,9 @@ def add_wishlist(request, id):
             f'{ product.name } is in your favourites!'
         ))
     return render(request, 'products/product_info.html', {'product':product})
+
+def details(request, product_id):
+
+    product = get_object_or_404(Product, id=id)
+
+    return render(request, 'products/product_info.html', {'product':product})

@@ -3,7 +3,6 @@
 
 {% block content %}
 <br>
-<br>
 
 <!--Top level titles -->
 
@@ -25,9 +24,9 @@
                 <table class="table table-sm table-borderless">
                     <thead class="text-black cart-table-head">
                         <tr>
+                            <th scope="col"></th>
                             <th scope="col">Product Name</th>
                             <th scope="col">Price</th>
-                            <th scope="col"></th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -51,9 +50,25 @@
 <!--Add or remove from cart-->
 
                         <td class="py-5 w-25">                            
-                            <a class="btn-general btn btn-info" role="button" href="{% url 'remove_wishlist' product.id %}">Remove</a>
+                            <a class="btn-danger btn btn-info" role="button" data-modal-target="#modal">Remove</a>
+                            <a class="btn-general btn btn-info" href="{% url 'product_info' product.id %}">View Details</a>
                         </td>
                     </tr>
+                    <div class="modal-confirm" id="modal">
+                        <div class="modal-header">
+                            <div class="title">
+                                <h3 class="modal-text">Remove from favourites</h3>
+                            </div>
+                            <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="modal-text">Are you sure you remove this from your favourites?</h5>
+                        </div>
+                        <div class="modal-body">
+                        <a class="btn-danger btn btn-info modal-text" data-modal-target="#modal"
+                                href="{% url 'remove_wishlist' product.id %}">Confirm Remove</a>
+                        </div>
+                    </div>
                     {% endfor %}
 
 <!--Return to shop button or continue to checkout-->
@@ -86,9 +101,13 @@
     </div>
 </div>
 
+
+<div id="overlay"></div>
+
+
 {% endblock %}
 
-{% block postloadjs %}
-{{ block.super }}
 
+{% block postloadjs %}
+<script src="{% static 'js/modal.js' %}"></script>
 {% endblock %}
