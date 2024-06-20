@@ -1,4 +1,5 @@
 function Contact() {
+    // Function for sending emailjs
     var tempParams = {
         from_name:document.getElementById("from_name").value,
         from_email:document.getElementById("from_email").value,

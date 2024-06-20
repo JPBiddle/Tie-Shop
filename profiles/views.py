@@ -53,11 +53,13 @@ def order_history(request, order_number):
 # Add items to wishlist - credit for help: https://www.youtube.com/watch?v=OgA0TTKAtqQ&t=2420s
 
 def wishlist(request):
+#Display wishlist
     product = Product.objects.filter(favourited_by=request.user.userprofile)
 
     return render(request, 'profiles/wishlist.html', {"wishlist":product})
 
 def remove_wishlist(request, id):
+#Remove product from wishlist
     remove = get_object_or_404(Product, id=id)
     product = Product.objects.filter(favourited_by=request.user.userprofile)
     remove.favourited_by.remove(request.user.userprofile)
@@ -67,6 +69,7 @@ def remove_wishlist(request, id):
     return render(request, 'profiles/wishlist.html', {"wishlist":product})
 
 def add_wishlist(request, id):
+#Add product to wishlist
     product = get_object_or_404(Product, id=id)
     if product.favourited_by.filter(id=request.user.id).exists():
         product.favourited_by.remove(request.user.userprofile)
@@ -78,7 +81,7 @@ def add_wishlist(request, id):
     return render(request, 'products/product_info.html', {'product':product})
 
 def details(request, product_id):
-
+#For product detail button in wish list
     product = get_object_or_404(Product, id=id)
 
     return render(request, 'products/product_info.html', {'product':product})

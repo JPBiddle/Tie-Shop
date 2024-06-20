@@ -6,15 +6,10 @@
 <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
 {% endblock %}
 
-{% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
-{% endblock %}
-
 {% block content %}
+
+<!-- Title for profile page -->
+
 <div class="overlay"></div>
 <div class="container">
     <div class="row no-gutters">
@@ -23,6 +18,9 @@
             <h2 class="logo-font mb-4">My Profile</h2>
         </div>
         <div class="col-4">
+
+<!-- Add product and faq for super user -->
+
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
                 <div class="btn-group">
@@ -37,11 +35,17 @@
                 </div>
             {% endif %}
         {% endif %}
+
+<!-- Wishlist and logout buttons -->
+
             <a class="btn-general btn btn-info" href="{% url 'wishlist' %}"><i class="fa-solid fa-heart"></i> Favourites</a>
             <a class="btn-general btn btn-info" href="{% url 'account_logout' %}">Logout</a>
         </div>
         <hr>
     </div>
+
+<!-- User shipping info to update -->
+
     <div class="row">
         <div class="col-12 col-lg-6">
             <p class="text-muted">Default Delivery Information</p>

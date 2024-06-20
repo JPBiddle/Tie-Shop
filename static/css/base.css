@@ -1,3 +1,5 @@
+/* Global css values */
+
 html {
     height: 100%;
 }
@@ -15,7 +17,7 @@ h1 {
     font-weight: bold;
 }
 
-/* Nav and footer styling */
+/* Nav styling */
 
 .nav_base {
     background-color: #529984;
@@ -31,6 +33,18 @@ h1 {
     text-align: center;
     font-size: 3.5rem;
 }
+
+.nav-link:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.nav-link:focus {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* Footer styling */
 
 .footer_base {
     background-color: #529984;
@@ -60,6 +74,8 @@ h1 {
     z-index: 99999;
 }
 
+/* Toast styling */
+
 .custom-toast {
     overflow: visible;
 }
@@ -68,9 +84,7 @@ h1 {
     height: 2px;
 }
 
-.cart-table-head {
-    background-color: #dfdfdf;
-}
+/* Button styling for all pages */
 
 .btn-secondary {
     background-color: #0babcf;
@@ -106,6 +120,12 @@ h1 {
     color: white;
 }
 
+/* Cart page style */
+
+.cart-table-head {
+    background-color: #dfdfdf;
+}
+
 .add-to-cart {
     background-color: #0babcf;
     border-color: #7cad9f;
@@ -116,16 +136,6 @@ h1 {
     border-color: #54776d;
 }
 
-.nav-link:hover {
-    color: white;
-    transform: scale(1.2);
-}
-
-.nav-link:focus {
-    color: white;
-    transform: scale(1.2);
-}
-
 .social:focus {
     color: white;
 }
@@ -134,6 +144,9 @@ h1 {
     text-decoration: underline;
     color: #0cbd8b;
 }
+
+
+/* Modal styling */
 
 .modal-confirm {
     position: fixed;
@@ -194,6 +207,8 @@ h1 {
     pointer-events: all;
     opacity: 1;
 }
+
+/* Accordion styling for FAQ */
 
 .accordion-header {
     border-radius: 10%;
