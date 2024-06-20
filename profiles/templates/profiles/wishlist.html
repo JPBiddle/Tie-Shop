@@ -35,6 +35,21 @@
 <!--Content for the table containing items added to cart-->
 
                     {% for product in wishlist %}
+                    <div class="modal-confirm" id="modal{{ product.id }}">
+                        <div class="modal-header">
+                            <div class="title">
+                                <h3 class="modal-text">Remove from favourites</h3>
+                            </div>
+                            <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="modal-text">Are you sure you remove {{ product.name }} from your favourites?</h5>
+                        </div>
+                        <div class="modal-body">
+                        <a class="btn-danger btn btn-info modal-text"
+                                href="{% url 'remove_wishlist' product.id %}">Confirm Remove</a>
+                        </div>
+                    </div>
                     <tr>
                         <td class="p-5 w-25">
                             <img class="img-fluid rounded" src="{{ product.image.url }}">
@@ -50,25 +65,10 @@
 <!--Add or remove from cart-->
 
                         <td class="py-5 w-25">                            
-                            <a class="btn-danger btn btn-info" role="button" data-modal-target="#modal">Remove</a>
+                            <a class="btn-danger btn btn-info" role="button" data-modal-target="#modal{{ product.id }}">Remove</a>
                             <a class="btn-general btn btn-info" href="{% url 'product_info' product.id %}">View Details</a>
                         </td>
                     </tr>
-                    <div class="modal-confirm" id="modal">
-                        <div class="modal-header">
-                            <div class="title">
-                                <h3 class="modal-text">Remove from favourites</h3>
-                            </div>
-                            <button data-close-button class="close-button">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <h5 class="modal-text">Are you sure you remove this from your favourites?</h5>
-                        </div>
-                        <div class="modal-body">
-                        <a class="btn-danger btn btn-info modal-text" data-modal-target="#modal"
-                                href="{% url 'remove_wishlist' product.id %}">Confirm Remove</a>
-                        </div>
-                    </div>
                     {% endfor %}
 
 <!--Return to shop button or continue to checkout-->
