@@ -15,6 +15,7 @@
 
 {% block content %}
 
+<!-- Top level title -->
 <div class="overlay"></div>
 <br>
 <br>
@@ -27,7 +28,7 @@
     </div>
 </div>
 <br>
-
+<!-- Table containing order info -->
 <div class="row mx-auto">
     <div class="col-12 col-lg-7 text-right mx-auto">
         <div class="order-confirmation-wrapper p-2 border">
@@ -72,7 +73,7 @@
             {% endfor %}
 
             <hr>
-
+<!-- Users shipping information -->
             <div class="row">
                 <div class="col">
                     <p class="text-muted"><u>Shipping To:</u></p>
@@ -137,7 +138,7 @@
             </div>
 
             <hr>
-
+<!-- Info for billing / order total and shipping costs -->
             <div class="row">
                 <div class="col">
                     <p class="text-muted"><u>Billing Info:</u></p>
@@ -165,6 +166,7 @@
             </div>
         </div>
         <br>
+<!-- Buttons to return to profile or shop -->
         <div class="row">
             <div class="col-12 col-md-4">
                 {% if from_profile %}

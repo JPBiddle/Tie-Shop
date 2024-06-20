@@ -29,11 +29,11 @@ class Order(models.Model):
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
 
     def _generate_order_number(self):
-
+        # Create order number generated with uuid
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
-
+        # Update the grand total each time an item is added including delivery cost
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
 
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
@@ -44,7 +44,7 @@ class Order(models.Model):
         self.save()
 
     def save(self, *args, **kwargs):
-
+        # Set order number when saving 
         if not self.order_number:
             self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
@@ -59,6 +59,7 @@ class OrderLineItem(models.Model):
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
+        # Set line order item and update total on save
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
 

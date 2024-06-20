@@ -8,7 +8,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, item_id):
-
+    # Add quantity of product to bag
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -26,12 +26,10 @@ def add_to_cart(request, item_id):
     return redirect(redirect_url)
 
 def adjust_cart(request, item_id):
-
-    # Get quantity of item and add to current bag
+    # Change quantity of product to bag
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
 
-    # get products
     if 'item_id' in request.POST:
         select = request.POST['item_id']
 
@@ -50,7 +48,7 @@ def adjust_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-
+    # Remove item(s) from bag
     product = Product.objects.get(pk=item_id)
 
     try:

@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-
+<!-- Top level titles -->
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
@@ -31,6 +31,7 @@
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0 text-muted">Item</p>
                 </div>
+<!-- Display cart items -->
             </div>
             {% for item in cart_items %}
             <div class="row">
@@ -45,6 +46,7 @@
                 </div>
             </div>
             {% endfor %}
+<!-- Display order totals -->
             <hr class="my-0">
             <div class="row text-black text-right">
                 <div class="col-7 offset-2">
@@ -59,6 +61,7 @@
                 </div>
             </div>
         </div>
+<!-- Crispy form for shipping details -->
         <div class="col-12 col-lg-6 mb-5">
             <h5 class="text-muted">Your Details</h5>
             <br>
@@ -93,6 +96,7 @@
                         {% endif %}
                     </div>
                 </fieldset>
+<!-- Payment details input -->
                 <fieldset class="px-3">
                     <legend class="fieldset-label text-black px-2 w-auto"><small>Payment</small></legend>
                     <div class="mb-3" id="card-element"></div>
@@ -124,7 +128,7 @@
         </div>
     </div>
 </div>
-
+<!-- Overlay for loading while checkout completes -->
 <div id="loading-overlay">
     <h1 class="text-light logo-font loading-spinner">
         <span class="icon">
@@ -136,7 +140,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-
+<!-- Stripe javascript -->
 {{ block.super }}
 {{ stripe_public_key|json_script:"id_stripe_public_key" }}
 {{ client_secret|json_script:"id_client_secret" }}

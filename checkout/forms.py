@@ -11,7 +11,7 @@ class OrderForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
 
         super().__init__(*args, **kwargs)
-        # dict of placeholders
+        # Add list of placeholders to replace labels
         placeholders = {
             'full_name': 'Full Name',
             'email': 'Email Address',

@@ -5,11 +5,11 @@ from .models import OrderLineItem
 
 @receiver(post_save, sender=OrderLineItem)
 def update_on_save(sender, instance, created, **kwargs):
-
+    # Update order total when line item created
     instance.order.update_total()
 
 
 @receiver(post_delete, sender=OrderLineItem)
 def update_on_delete(sender, instance, **kwargs):
-
+    # Update total when line item removed
     instance.order.update_total()

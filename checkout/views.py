@@ -72,7 +72,7 @@ def checkout(request):
                     ))
                     order.delete()
                     return redirect(reverse('view_cart'))
-
+            # Save info to users profile
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
@@ -93,7 +93,7 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-
+        # Pre fill user info in form
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -128,6 +128,7 @@ def checkout(request):
     return render(request, template, context)
 
 def checkout_success(request, order_number):
+    # View for successful checkout
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -135,7 +136,7 @@ def checkout_success(request, order_number):
         profile = UserProfile.objects.get(user=request.user)
         order.user_profile = profile
         order.save()
-
+        # Users info is then saved
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,
