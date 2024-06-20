@@ -11,6 +11,9 @@ def about(request):
 def contact(request):
     return render(request, 'contact.html')
 
+def thankyou(request):
+    return render(request, 'thankyou.html')
+
 def subject(request):
 
     subjects = Subject.objects.all()

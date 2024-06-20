@@ -6,8 +6,7 @@ function Contact() {
     };
 
     emailjs.send('service_xx2o104','template_6yopv7a',tempParams)
-    .then(function(res){
-        document.getElementById(".modal-confirm").classList.add("active");
-        console.log("success", res.status);
-    })
+    .then(function(){
+        window.location.href = '../thankyou';
+        })
 }
