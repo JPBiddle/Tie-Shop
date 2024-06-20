@@ -37,7 +37,7 @@
                 </div>
             {% endif %}
         {% endif %}
-            <a class="btn-general btn btn-info" href=""><i class="fa-solid fa-heart"></i> Favourites</a>
+            <a class="btn-general btn btn-info" href="{% url 'wishlistview' %}"><i class="fa-solid fa-heart"></i> Favourites</a>
             <a class="btn-general btn btn-info" href="{% url 'account_logout' %}">Logout</a>
         </div>
         <hr>

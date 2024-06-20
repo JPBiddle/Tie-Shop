@@ -14,7 +14,6 @@ def all_products(request):
 def product_info(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
-
     return render(request, 'products/product_info.html', {'product':product})
 
 def colour(request, blub):

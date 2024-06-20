@@ -5,7 +5,7 @@
 <br>
 <br>
 
-<!--Top level titles for free delivery and cart -->
+<!--Top level titles -->
 
 <br>
 <div class="container mb-2">
@@ -26,9 +26,7 @@
                     <thead class="text-black cart-table-head">
                         <tr>
                             <th scope="col">Product Name</th>
-                            <th scope="col"></th>
                             <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
                         </tr>
                     </thead>
 
@@ -38,13 +36,13 @@
                     {% for item in wishlist %}
                     <tr>
                         <td class="p-5 w-25">
-                            <img class="img-fluid rounded" src="{{ wishlist.product.image.url }}">
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                         </td>
                         <td class="py-5">
-                            <p class="my-0">{{ wishlist.product.name }}</p>
+                            <p class="my-0">{{ item.product.name }}</p>
                         </td>
                         <td class="py-5">
-                            <p class="my-0">£{{ wishlist.product.price }}</p>
+                            <p class="my-0">£{{ item.product.price }}</p>
                         </td>
                         
                             

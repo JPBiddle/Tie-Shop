@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models import Q
 import datetime
 
+from profiles.models import UserProfile
 
 # Category of product
 class Category(models.Model):
@@ -38,6 +39,7 @@ class Product(models.Model):
     image_2 = models.ImageField(upload_to='uploads/product/')
     product_id = models.CharField(max_length=10, default='')
     sku = models.CharField(max_length=254, null=True, blank=True)
+    wished_item = models.ManyToManyField(UserProfile, related_name='user_wishlist', blank=True)
 
     def __str__(self):
         return self.name

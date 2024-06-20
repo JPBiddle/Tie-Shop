@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.views import generic
 
 from products.models import Product
 from .models import UserProfile
@@ -11,7 +12,6 @@ def profile(request):
     """ Display the user's profile. """
 
     profile = get_object_or_404(UserProfile, user=request.user)
-
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -50,16 +50,13 @@ def order_history(request, order_number):
 
     return render(request, template, context)
 
+
 def add_wishlist(request, id):
     product = get_object_or_404(Product, id=id)
-    redirect_url = request.POST.get('redirect_url')
-    if product.add_wishlist.filter(id=request.user.id).exists():
-        product.add_wishlist.remove(request.user)
+    # redirect_url = request.POST.get('redirect_url')
+    if product.wished_item.filter(id=request.user.id).exists():
+        product.wished_item.remove(request.user.userprofile)
     else:
-        product.add_wishlist.add(request.user)
+        product.wished_item.add(request.user.userprofile)
 
-    context = {
-        'user': user,
-        'product': product,
-    }
-    return redirect(redirect_url, context)
+    return render(request, 'products/product_info.html', {'product':product})
