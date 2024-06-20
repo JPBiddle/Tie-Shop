@@ -27,29 +27,31 @@
                         <tr>
                             <th scope="col">Product Name</th>
                             <th scope="col">Price</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
 
 
 <!--Content for the table containing items added to cart-->
 
-                    {% for item in wishlist %}
+                    {% for product in wishlist %}
                     <tr>
                         <td class="p-5 w-25">
-                            <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                            <img class="img-fluid rounded" src="{{ product.image.url }}">
                         </td>
                         <td class="py-5">
-                            <p class="my-0">{{ item.product.name }}</p>
+                            <p class="my-0">{{ product.name }}</p>
                         </td>
                         <td class="py-5">
-                            <p class="my-0">£{{ item.product.price }}</p>
+                            <p class="my-0">£{{ product.price }}</p>
                         </td>
                         
                             
 <!--Add or remove from cart-->
 
                         <td class="py-5 w-25">                            
-                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                            <a class="btn-general btn btn-info" role="button" href="{% url 'remove_wishlist' product.id %}">Remove</a>
                         </td>
                     </tr>
                     {% endfor %}
