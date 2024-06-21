@@ -12,9 +12,7 @@
         "image_2": "uploads/product/navy_shantung_2.webp",
         "product_id": "1",
         "sku": null,
-        "favourited_by": [
-            2
-        ]
+        "favourited_by": []
     }
 },
 {
@@ -94,9 +92,7 @@
         "image_2": "uploads/product/navy_stripe_shantung_2.webp",
         "product_id": "6",
         "sku": null,
-        "favourited_by": [
-            1
-        ]
+        "favourited_by": []
     }
 },
 {
