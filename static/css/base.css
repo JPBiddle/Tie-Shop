@@ -7,8 +7,8 @@ html {
 body {
     font-family: "Lora", serif;
     background-size: cover;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     height: 100vh;
 }
 
@@ -36,9 +36,9 @@ h1 {
 
 @media screen and (max-width: 951px) {
     .page-head {
-      font-size: 1.5rem;
+        font-size: 1.5rem;
     }
-  }
+}
 
 .nav-link:hover {
     color: white;
@@ -63,40 +63,47 @@ h1 {
 
 @media screen and (max-width: 950px) {
     .headinghide {
-      display: none;
+        display: none;
     }
-  }
+}
 
 @media screen and (min-width: 951px) {
     .headingmobile {
-      display: none;
+        display: none;
     }
-  }
+}
+
+@media screen and (min-width: 951px) {
+    .welcome {
+        display: none;
+    }
+}
 
 @media screen and (min-width: 951px) {
     #navbarSupportedContent {
-      display: none !important;
+        display: none !important;
     }
-  }
+}
 
 @media screen and (max-width: 950px) {
     .productimg {
-      display: none;
+        display: none;
     }
-  }
-  @media screen and (max-width: 950px) {
+}
+
+@media screen and (max-width: 950px) {
     .productimgmob {
         max-width: 50%;
         height: auto;
     }
-  }
-  
+}
+
 
 @media screen and (min-width: 950px) {
     .productimgmob {
-      display: none;
+        display: none;
     }
-  }
+}
 
 /* Footer styling */
 
@@ -145,7 +152,8 @@ h1 {
     border-color: #7cad9f;
 }
 
-.btn-check:focus+.btn-secondary, .btn-secondary:focus {
+.btn-check:focus+.btn-secondary,
+.btn-secondary:focus {
     background-color: #54776d;
     box-shadow: none;
 }
