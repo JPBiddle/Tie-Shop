@@ -34,15 +34,50 @@ h1 {
     font-size: 3.5rem;
 }
 
+@media screen and (max-width: 951px) {
+    .page-head {
+      font-size: 1.5rem;
+    }
+  }
+
 .nav-link:hover {
     color: white;
     transform: scale(1.2);
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .nav-link:focus {
     color: white;
     transform: scale(1.2);
 }
+
+@media screen and (max-width: 950px) {
+    .headinghide {
+      display: none;
+    }
+  }
+
+@media screen and (min-width: 951px) {
+    .headingmobile {
+      display: none;
+    }
+  }
+
+@media screen and (min-width: 951px) {
+    #navbarSupportedContent {
+      display: none !important;
+    }
+  }
 
 /* Footer styling */
 
