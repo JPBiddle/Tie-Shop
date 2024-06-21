@@ -1,24 +1,6 @@
 [
 {
     "model": "info.question",
-    "pk": 5,
-    "fields": {
-        "subject": 4,
-        "question": "What makes Monty & Turner ties unique?",
-        "answer": "Our ties are handcrafted in Italy using the finest materials and traditional techniques. Each tie is designed to offer exceptional quality, elegance, and durability, making them a perfect addition to any wardrobe."
-    }
-},
-{
-    "model": "info.question",
-    "pk": 6,
-    "fields": {
-        "subject": 4,
-        "question": "Where are Monty & Turner ties made?",
-        "answer": "All Monty & Turner ties are proudly made in Italy. We work with skilled artisans who have generations of experience in tie-making to ensure the highest quality and craftsmanship."
-    }
-},
-{
-    "model": "info.question",
     "pk": 7,
     "fields": {
         "subject": 5,
@@ -96,6 +78,24 @@
         "subject": 8,
         "question": "Do you offer exchanges?",
         "answer": "Yes, we offer exchanges. If you would like to exchange your tie for a different one, please follow the return process and specify the tie you would like to receive in exchange. We will ship the new tie once we receive the original item."
+    }
+},
+{
+    "model": "info.question",
+    "pk": 42,
+    "fields": {
+        "subject": 4,
+        "question": "What makes Monty & Turner ties unique?",
+        "answer": "Our ties are handcrafted in Italy using the finest materials and traditional techniques. Each tie is designed to offer exceptional quality, elegance, and durability, making them a perfect addition to any wardrobe."
+    }
+},
+{
+    "model": "info.question",
+    "pk": 44,
+    "fields": {
+        "subject": 4,
+        "question": "Where are Monty & Turner ties made?",
+        "answer": "All Monty & Turner ties are proudly made in Italy. We work with skilled artisans who have generations of experience in tie-making to ensure the highest quality and craftsmanship."
     }
 }
 ]

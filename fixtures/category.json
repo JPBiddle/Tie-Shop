@@ -3,14 +3,16 @@
     "model": "products.category",
     "pk": 1,
     "fields": {
-        "name": "Shantung"
+        "name": "Shantung",
+        "friendly_name": "Shantung"
     }
 },
 {
     "model": "products.category",
     "pk": 2,
     "fields": {
-        "name": "Silk"
+        "name": "Silk",
+        "friendly_name": "Silk"
     }
 }
 ]
