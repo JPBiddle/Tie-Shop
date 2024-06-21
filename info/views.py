@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render, reverse, get_object_or_404
 from info.models import Subject, Question
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .forms import QuestionForm
 
@@ -20,6 +21,8 @@ def subject(request):
 
     return render(request, 'faq.html', {'subjects':subjects, 'questions':questions})
 
+
+@login_required
 def add_faq(request):
     #Add new faq question and answer
     if request.method == 'POST':
@@ -39,6 +42,8 @@ def add_faq(request):
 
     return render(request, template, context)
 
+
+@login_required
 def delete_faq(request, question_id):
     #Delete FAQ entry
     subject = get_object_or_404(Question, pk=question_id)
@@ -46,6 +51,7 @@ def delete_faq(request, question_id):
     messages.success(request, 'Q&A has been deleted.')
     return redirect(reverse('faq'))
 
+@login_required
 def edit_faq(request, question_id):
     #Edit FAQ question and answer
     question = get_object_or_404(Question, pk=question_id)

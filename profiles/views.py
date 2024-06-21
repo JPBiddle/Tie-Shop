@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.views import generic
+from django.contrib.auth.decorators import login_required
 
 from products.models import Product
 from .models import UserProfile
@@ -8,6 +9,7 @@ from .forms import UserProfileForm
 
 from checkout.models import Order
 
+@login_required
 def profile(request):
     """ Display the user's profile. """
 
@@ -34,6 +36,7 @@ def profile(request):
 
     return render(request, template, context)
 
+@login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -52,13 +55,18 @@ def order_history(request, order_number):
 
 # Add items to wishlist - credit for help: https://www.youtube.com/watch?v=OgA0TTKAtqQ&t=2420s
 
+@login_required
 def wishlist(request):
 #Display wishlist
     product = Product.objects.filter(favourited_by=request.user.userprofile)
 
     return render(request, 'profiles/wishlist.html', {"wishlist":product})
 
+@login_required
 def remove_wishlist(request, id):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 #Remove product from wishlist
     remove = get_object_or_404(Product, id=id)
     product = Product.objects.filter(favourited_by=request.user.userprofile)
@@ -68,6 +76,7 @@ def remove_wishlist(request, id):
         ))
     return render(request, 'profiles/wishlist.html', {"wishlist":product})
 
+@login_required
 def add_wishlist(request, id):
 #Add product to wishlist
     product = get_object_or_404(Product, id=id)
