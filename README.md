@@ -579,22 +579,22 @@ Individual functions were also tested after deployment:
 |Navigation                |Site nav buttons link correctly.                                                                                        |PASS  |
 |                          |Site nav is responsive.                                                                                                 |PASS  |
 |                          |Site nav hides and displays buttons depending on authentication.                                                        |PASS  |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|                          |                                                                                                                        |      |
 |Shop                      |Shop all displays all products.                                                                                         |PASS  |
 |                          |Shop all can be filtered by material and colour.                                                                        |PASS  |
 |                          |Shop all can be filtered with the search bar.                                                                           |PASS  |
 |                          |Clicking on a product brings user to the correct product.                                                               |PASS  |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|                          |                                                                                                                        |      |
 |Product info              |Product info is correctly displayed.                                                                                    |PASS  |
 |                          |If authenticated, used can add product to wishlist.                                                                     |PASS  |
 |                          |User can add product to cart, and choose quantity.                                                                      |PASS  |
 |                          |Admin can see buttons for edit and delete product.                                                                      |PASS  |
 |                          |Attempting to delete a product triggers a modal asking to confirm.                                                      |PASS  |
 |                          |Edit button brings admin to edit product page.                                                                          |PASS  |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|                          |                                                                                                                        |      |
 |Product edit              |All fields can be selected inside the product edit page and update correctly.                                           |PASS  |
 |                          |Changes made are displayed site wide.                                                                                   |PASS  |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|                          |                                                                                                                        |      |
 |FAQ                       |FAQ page successfully iterates and displays faq model content.                                                          |PASS  |
 |                          |If user is an adin, edit faq buttons appear.                                                                            |PASS  |
 |                          |Edit buton brings admin to a form to edit or delete FAQ.                                                                |PASS  |
@@ -602,32 +602,32 @@ Individual functions were also tested after deployment:
 |                          |Submitting changes or deleting is displayed on the FAQ.                                                                 |PASS  |
 |                          |All fields can be selected inside the product edit page and update correctly.                                           |PASS  |
 |                          |Changes made are displayed site wide.                                                                                   |PASS  |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|                          |                                                                                                                        |      |
 |Contact                   |Contact page renders empty contact form.                                                                                |PASS  |
 |                          |Contact form required fields work correctly.                                                                            |PASS  |
 |                          |Submitting the form brings user to a thank you page.                                                                    |PASS  |
 |                          |Message is successfully received in gmail with correct message                                                          |PASS  |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|                          |                                                                                                                        |      |
 |Profile page              |Users are displayed their saved info on the profile page.                                                               |PASS  |
 |                          |Users can access their wishlist from the profile page.                                                                  |PASS  |
 |                          |Users can logout and are displayed a message when they do from the profile page.                                        |PASS  |
 |                          |Users can update their information on the profile page form with a confirm message.                                     |PASS  |
 |                          |Admin user can access the add product and add faq from profile view.                                                    |PASS  |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|                          |                                                                                                                        |      |
 |Cart                      |Users can add items to their cart.                                                                                      |PASS  |
 |                          |Users can update their cart item quantity.                                                                              |PASS  |
 |                          |Users can remove items from their cart.                                                                                 |PASS  |
 |                          |The correct price, total, shipping and grand total are displayed after every change is made.                            |PASS  |
 |                          |When cart is empty, users are informed.                                                                                 |PASS  |
 |                          |Users can proceed to checkout from the cart.                                                                            |PASS  |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|                          |                                                                                                                        |      |
 |Checkout                  |Users can make payments via stripe.                                                                                     |PASS  |
 |                          |Webhooks are sent to capture user info when payment made, including order info.                                         |PASS  |
 |                          |Users are sent a confirmation email when order complete.                                                                |PASS  |
 |                          |Order information is stored in the profile page.                                                                        |PASS  |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|                          |                                                                                                                        |      |
 |Sign up                   |Signing up adds a user to the database.                                                                                 |PASS  |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|                          |                                                                                                                        |      |
 |Login and out             |Users can securely login and receive a message when they do so.                                                         |PASS  |
 |                          |Users can securely logout and receive a message when they do so.                                                        |PASS  |
 
