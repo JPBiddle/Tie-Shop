@@ -222,17 +222,21 @@ Wireframes were produced using balsamiq. These will showcase the site as intende
 
 ### Surface
 
+The colour palette will consist of two shades of green for the navigation bar and modals, white for text over green elements and a shade of blue for buttons.
+This is to differentiate the buttons as active easily and enable easy navigation through the site.
+
+I believe a simple colour palette is appropriate for this site, please see below the palette:
 
 <details>
 <summary>Colour Palette</summary>
 
-![viability]()
+![Colour](markdown-files/readme-files/Colours.png)
 
 </details>
 
 ### Typography
 
-The typography I will use will be 
+The typography I will use will be Playfair Display, with serif as a backup. Its a formal font thats easy to read but is unique enough to add some flair to the website. I chose this font to be displayed sitewide as it will maintain a consistent look while also help build character for the style elements.
 
 ### Imagery
 
@@ -244,9 +248,8 @@ The typography I will use will be
 
 ### Information Architecture
 
-#### Database
+### Database
 
-- 
 
 #### Data Models
 
@@ -345,48 +348,79 @@ The typography I will use will be
 
 ## Features
 
-The website features
----
+The website features a set of consistent and intuitive functions.
+
 
 ### Sign Up
 
-
+Sign up is available on the home page. From the link in the navigation bar, you can find the form to enter a new username, email and password. From there you will be able to login to explore the other functions.
 
 
 ---
 
 ### Sign In
 
-
+Signing in will give the user access to saving their details for future orders, updating details, viewing items in their wishlist and viewing their past orders. Many features on the site are only available when logged in.
 
 ---
 
 ### Logout
 
+Logging out is confirmed with a seperate page asking if you are ready to sign out. The logout button is found on the user dashboard.
 
 
 ---
 
 ### Add product to cart
 
-
+After finding a product that the user likes, they can add this product to the cart. A quantity can be selected, up to 10 per tie per customer. Once added to the cart, they can be seen again in the cart, and quantity can also be changed.
 
 ---
 
 ### Remove product from cart
 
+Of course it is essential to be able to remove items from the cart, and this is done on the cart page. A message is displayed to let the user know that the item has been removed.
+
 ---
 
 ### Checkout
+
+Checkout is a page that completes the order using stripe payment systems. After an order is complete, an email confirmation is sent to the user.
+
 ---
 
 ### Home page features
 
-From the home page, 
+From the home page features a banner image which links to the store page displaying all products.
+The home page is where the user will first encounter the navigation and footer, where the user can access the sign in / sign up, user dashboard and cart on navigation, and FAQ, contact and about pages on the footer.
 
 ---
 
 ### User page
+
+User pages, also known as the user dashboard, is where the user is presented with their details which can be updated, their user wishlist and their past orders. Users can click through to view their wishlist and remove items from said list.
+Users can also view their order history.
+
+---
+
+### Owner features
+
+On the user dashboard, if logged in as super user, the links to the add FAQ and add product pages appear. From here the site owner will be presented with forms to fill to complete these actions.
+
+On product information pages the options to delete and edit products will appear for the site owner.
+Edit FaQ buttons will appear next to FaQ's.
+
+---
+
+### Site modals
+
+On pages where the site owner can remove content from the site, modals have been installed as a verification to ensure that the user wants to complete this irreversible act.
+
+---
+
+### Contact page
+
+The contact page enables the user to contact the site owner via EmailJs javascript. On completing the form, they will be redirected to a thank you page.
 
 ---
 
@@ -424,10 +458,16 @@ Issue with added to cart javascript and python redirect not allowing user to rea
 
 - HTML5
 - CSS
-
+- JavaScript
+- Python
 
 ### Frameworks, Libraries and Programs
 
+- Bootstrap was used to implement the responsiveness of the site, using bootstrap classes.
+- jQuery was used to simplify the JavaScript code used.
+- Google fonts was used to import the fonts.
+- Jinja templating language was used to simplify and display backend data.
+- EmailJs was used to implement the email contact form.
 
 ---
 
@@ -460,6 +500,11 @@ Please view full testing document [here]()
 
 ## Acknowledgements
 
+Developer would like to thank the following -
+
+  - Friends and family for their feedback during development.
+  - My mentor, tutor Koko, for her help with ideas for the project functions.
+  - The Code Institute slack community.
 ---
 
 
