@@ -539,7 +539,106 @@ When creating the wishlist I was unsure of where to build the pages, as it could
 
 ## Testing
 
-Please view full testing document [here]()
+Testing was conducted as the project was built and every aspect of the project was also tested post deployment. 
+The only major issue encountered post build was the inclusion of WEBP images not loading, and these had to be reloaded as JPEG.
+
+Webhooks were tested, as was stripe and EmailJS.
+
+The tables below document the results of the manual testing. Due to very tight time constraints the testing was all manually undertaken in this format.
+
+
+|As a…                     |I want to…                                                                                                              |Result|
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|New customer              |Know what the site is about.                                                                                            |PASS  |
+|                          |I would like to easily navigate to view products.                                                                       |PASS  |
+|                          |I would like to be able view extra details of each product.                                                             |PASS  |
+|                          |I would like to create a secure account.                                                                                |PASS  |
+|                          |I would like to add products I wish to purchase to my cart.                                                             |PASS  |
+|                          |I would like to checkout without an account.                                                                            |PASS  |
+|                          |I would like to contact the site owner without an account.                                                              |PASS  |
+|                          |I would like to read additional information and FAQ's.                                                                  |PASS  |
+|Returning customer        |I would like to update my details.                                                                                      |PASS  |
+|                          |I would like to save products to a wishlist.                                                                            |PASS  |
+|                          |I would like to be able securely log out of my account.                                                                 |PASS  |
+|                          |I would like a recieve confirmation emails after ordering.                                                              |PASS  |
+|                          |I would like to view my past orders.                                                                                    |PASS  |
+|Frequent visitor          |I would like to filter the shop page to choose specific items.                                                          |PASS  |
+|                          |I would like to search for items that I may have missed.                                                                |PASS  |
+|                          |I would like a consistent a familiar view of the site.                                                                  |PASS  |
+|As a website owner        |I would like the website to be easy to understand and navigate.                                                         |PASS  |
+|                          |I would like to be able to edit and delete products.                                                                    |PASS  |
+|                          |I would like the website to let me edit and delete FAQ content.                                                         |PASS  |
+|                          |I would like the website access all models via the django admin.                                                        |PASS  |
+|                          |I would like the website to view and update the minimum order value and current delivery time.                          |PASS  |
+
+
+Individual functions were also tested after deployment:
+
+|Function tested           |funtion outcome                                                                                                         |Result|
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|Navigation                |Site nav buttons link correctly.                                                                                        |PASS  |
+|                          |Site nav is responsive.                                                                                                 |PASS  |
+|                          |Site nav hides and displays buttons depending on authentication.                                                        |PASS  |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|Shop                      |Shop all displays all products.                                                                                         |PASS  |
+|                          |Shop all can be filtered by material and colour.                                                                        |PASS  |
+|                          |Shop all can be filtered with the search bar.                                                                           |PASS  |
+|                          |Clicking on a product brings user to the correct product.                                                               |PASS  |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|Product info              |Product info is correctly displayed.                                                                                    |PASS  |
+|                          |If authenticated, used can add product to wishlist.                                                                     |PASS  |
+|                          |User can add product to cart, and choose quantity.                                                                      |PASS  |
+|                          |Admin can see buttons for edit and delete product.                                                                      |PASS  |
+|                          |Attempting to delete a product triggers a modal asking to confirm.                                                      |PASS  |
+|                          |Edit button brings admin to edit product page.                                                                          |PASS  |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|Product edit              |All fields can be selected inside the product edit page and update correctly.                                           |PASS  |
+|                          |Changes made are displayed site wide.                                                                                   |PASS  |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|FAQ                       |FAQ page successfully iterates and displays faq model content.                                                          |PASS  |
+|                          |If user is an adin, edit faq buttons appear.                                                                            |PASS  |
+|                          |Edit buton brings admin to a form to edit or delete FAQ.                                                                |PASS  |
+|                          |Attempting to delete an FAQ triggers a modal asking to confirm.                                                         |PASS  |
+|                          |Submitting changes or deleting is displayed on the FAQ.                                                                 |PASS  |
+|                          |All fields can be selected inside the product edit page and update correctly.                                           |PASS  |
+|                          |Changes made are displayed site wide.                                                                                   |PASS  |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|Contact                   |Contact page renders empty contact form.                                                                                |PASS  |
+|                          |Contact form required fields work correctly.                                                                            |PASS  |
+|                          |Submitting the form brings user to a thank you page.                                                                    |PASS  |
+|                          |Message is successfully received in gmail with correct message                                                          |PASS  |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|Profile page              |Users are displayed their saved info on the profile page.                                                               |PASS  |
+|                          |Users can access their wishlist from the profile page.                                                                  |PASS  |
+|                          |Users can logout and are displayed a message when they do from the profile page.                                        |PASS  |
+|                          |Users can update their information on the profile page form with a confirm message.                                     |PASS  |
+|                          |Admin user can access the add product and add faq from profile view.                                                    |PASS  |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|Cart                      |Users can add items to their cart.                                                                                      |PASS  |
+|                          |Users can update their cart item quantity.                                                                              |PASS  |
+|                          |Users can remove items from their cart.                                                                                 |PASS  |
+|                          |The correct price, total, shipping and grand total are displayed after every change is made.                            |PASS  |
+|                          |When cart is empty, users are informed.                                                                                 |PASS  |
+|                          |Users can proceed to checkout from the cart.                                                                            |PASS  |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|Checkout                  |Users can make payments via stripe.                                                                                     |PASS  |
+|                          |Webhooks are sent to capture user info when payment made, including order info.                                         |PASS  |
+|                          |Users are sent a confirmation email when order complete.                                                                |PASS  |
+|                          |Order information is stored in the profile page.                                                                        |PASS  |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|Sign up                   |Signing up adds a user to the database.                                                                                 |PASS  |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|------|
+|Login and out             |Users can securely login and receive a message when they do so.                                                         |PASS  |
+|                          |Users can securely logout and receive a message when they do so.                                                        |PASS  |
+
+### For testing checkout
+
+Please enter dummy information in address and contact fields. Users will not be charged on this site.
+
+Test card information:
+- Card number: 4242 4242 4242 4242
+- Expiry date: any future date
+- Postcode: any repeated numbers
 
 ---
 
@@ -575,6 +674,81 @@ The site was deployed using GitHub and is hosted on Heroku and was deployed as b
 
 ### Amazon web services
 
+#### Create a bucket
+
+- Create an Amazon AWS account
+- Search for S3 on the interface and create a new general purpose bucket with the same name as your Heroku app.
+- Select the region nearest to you and untick the block all public access box.
+- Tick the acknowledgement and select create bucket, then go back to your bucket.
+- Under the Properties tab, enable static web hosting.
+- Use index.html for the Index document and error.html for the Error document and select save changes.
+- Under the permissions tab, edit the CORS box with the following:
+  - [
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+]
+- Edit the Bucket policy and click on Policy generator.
+- Select S3 bucket policy and enter * in the Principal box and GetObject in the actions box.
+- Copy the ARN name from the Properties tab into the ARN box and click Add Statement.
+- Click Generate Policy and copy the box from the box and paste it into the Bucket Policy.
+- Add /* to the end of the ARN under the Resource field and Save.
+
+#### Create Identity and Access management for the bucket
+
+- Search for IAM on the interface bar.
+- Click on User Groups under Access Management and then lick on Create group.
+- Give the group a meaningful name.
+- Click on Create Group and then click on Policies under Access Management.
+- Click Create Policy.
+- Select JSON then Actions > Import Policy.
+- Search for AmazonS3FullAccess and select it and import it.
+- Get the ARN from the bucket created earlier.
+- Paste the ARN in the Resource field instead of * so it looks like the following:
+  - "Resource": [
+    "pasted-arn-name",
+    "pasted-arn-name/*"
+]
+- Give the policy a meaningful name, then click on Create Policy.
+- Attach the policy to a Group by going to Access Management and into User Groups.
+- Click on the group name created above and under the Permissions tab click on Add Permissions > Attach Policy.
+- Search for the policy created above, select the policy and click Attach Policies, then select Access Management > Users.
+- Click Create user and enter a meaningful name to use.
+- Click Next, Select the group you created above and click Next and finally click Create User.
+
+#### Retrieve access keys
+
+- Go to IAM and select 'Users', select the user to create the CSV file.
+- Select the 'Security Credentials' tab, go to 'Access Keys' and click 'Create access key'.
+- Select 'Application running outside AWS' and click Next, then click 'Create Access Key'.
+- Finally, click the 'Download .csv file' button You can then use this to complete the access keys in the Config Vars created above.
+- Keep your access keys a secret!
+
+#### Connect Django to S3
+
+- First, install boto3 and django-storages.
+- In settings.py:
+  - Add storages to INSTALLED_APPS
+   -Set the AWS bucket config:
+    - if "USE_AWS" in os.environ:
+AWS_STORAGE_BUCKET_NAME = "tie-shop"
+AWS_S3_REGION_NAME = "eu-west-1"
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+- Set the static and media files storage and location and override static and media URLs.
+- Delete DISABLE_COLLECTSTATIC variable from the Heroku Config Vars.
+- Deploy the app.
+- Go to the bucket page in AWS and create a media folder.
 
 ---
 
@@ -599,7 +773,10 @@ The site was deployed using GitHub and is hosted on Heroku and was deployed as b
 - In the terminal add the following:
   - "python3 manage.py showmigrations
   python3 manage.py migrate
-  python3 manage.py loaddata categories
+  python3 manage.py loaddata category
+  python3 manage.py loaddata colour
+  python3 manage.py loaddata subject
+  python3 manage.py loaddata answers
   python3 manage.py loaddata products"
 - Create a superuser in the terminal by adding a username and password after entering python3 manage.py createsuperuser.
 - Replace the (TEMPORARILY) DATABSES code from above with:
