@@ -3,7 +3,7 @@
 ## Code Institute Milestone Project 4
 
 ![Portfolio Mockup](markdown-files/readme-files/mockup.png)
-[Click here to view the live project]()
+[Click here to view the live project](https://tie-shop-2460624fe7ee.herokuapp.com/)
 
 - [M&T Tie Emporium](#monty--turners-tie-emporium)
   - [Table of Contents](#table-of-contents)
