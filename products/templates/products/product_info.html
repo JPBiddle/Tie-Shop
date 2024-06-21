@@ -3,14 +3,14 @@
 
 {% block content %}
 <div class="card mb-4 border-0">
-    <div class="row g-0 justify-content-md-center">
+    <div class="row g-0 px-4 justify-content-md-center">
 
 <!-- Product image -->
 
-        <div class="col-md-3">
-            <img src="{{ product.image_2.url }}" class="img-fluid" alt="{{ product.name }}">
+        <div class="col-lg-4 col-md-3">
+            <img src="{{ product.image_2.url }}" class="img-fluid productimg" alt="{{ product.name }}">
         </div>
-        <div class="col-md-3 mx-3">
+        <div class="col-lg-4 col-md-3 mx-3">
             <br>
             <br>
 
@@ -18,6 +18,10 @@
 
             <div class="card-body text-end">
                 <h4 class="card-title text-center">{{ product.name }}</h4>
+                <br>
+                <div class="col-lg-4 col-md-3" align="center">
+                    <img src="{{ product.image.url }}" class="img-fluid productimgmob" alt="{{ product.name }}">
+                </div>
                 <br>
                 <p class="card-text text-center"> {{ product.description }}</p>
                 <br>
@@ -59,7 +63,7 @@
 
 <!-- Shipping info -->
 
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center px-4">
     <div class="col-md-6">
         <div class="card border-0 mb-5">
             <i class="fa-solid fa-truck-fast fa-2xl text-center text-success"></i>

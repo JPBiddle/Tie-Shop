@@ -79,6 +79,25 @@ h1 {
     }
   }
 
+@media screen and (max-width: 950px) {
+    .productimg {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    .productimgmob {
+        max-width: 50%;
+        height: auto;
+    }
+  }
+  
+
+@media screen and (min-width: 950px) {
+    .productimgmob {
+      display: none;
+    }
+  }
+
 /* Footer styling */
 
 .footer_base {
