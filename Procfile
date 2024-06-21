@@ -1,1 +1,1 @@
-web: gunicorn tie-shop.wsgi:application
+web: gunicorn tie_shop.wsgi:application
